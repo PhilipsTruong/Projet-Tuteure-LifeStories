@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <title>Enketo Offline with Custom Timeline</title>
+  <style>
+    body, html {
+      margin: 0;
+      padding: 0;
+      height: 100vh;
+      font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+      overflow: hidden;
+    }
+    .split {
+        display: flex;
+        flex-direction: row;
+        height: 100vh;
+    }
+    .split.vertical {
+        flex-direction: column;
+        height: 100%;
+    }
+    .gutter {
+        background-color: #eee;
+        background-repeat: no-repeat;
+        background-position: 50%;
+    }
+    .gutter.gutter-horizontal {
+        cursor: col-resize;
+        background-image: url('data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAUAAAAeCAYAAADkftS9AAAAIklEQVQoU2M4c+bMfxAGAgYYmwGrIIiDjrELjpo5aiZeMwF+yNnOs5KSvgAAAABJRU5ErkJggg==');
+    }
+    .gutter.gutter-vertical {
+        cursor: row-resize;
+        background-image: url('data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAB4AAAAFAQMAAABo7865AAAABlBMVEVHcEzMzMzyCBKUAAAAAXRSTlMAQObYZgAAABBJREFUeF5jOAMEEAIEEFwAn3kMwcB6I2AAAAAASUVORK5CYII=');
+    }
+    #questionnaire { overflow-y: auto; padding: 15px; }
+    #trajectories { display: flex; flex-direction: column; overflow: hidden; }
+    #canvas { overflow-y: auto; padding: 15px; }
+    #bricks { overflow-y: auto; padding: 15px; background: #f9f9f9; border-top: 1px solid #ccc; }
+    #timeline { width: 100%; border: none; }
+    h2 { margin-top: 0; }
+    
+    /* Timeline item styles equivalent to prototype */
+    .vis-item.green { border: 2px solid rgba(150, 235, 150, 0.7) !important; background-color: rgba(150, 235, 150, 0.2); }
+    .vis-item.blue { border: 2px solid rgba(110, 139, 230, 0.7) !important; background-color: rgba(110, 139, 230, 0.2); }
+    .vis-item.red { border: 2px solid rgba(231, 104, 104, 0.7) !important; background-color: rgba(231, 104, 104, 0.2); }
+    .vis-item.yellow { background-color: #FFD700; }
+    .vis-item.highlight { border: 2px solid orange !important; box-shadow: 0 0 10px 2px rgba(255,165,0,0.5); }
+    .vis-item { height: 30px; }
+    .vis-group:has(.highlight) { background-color: #fff9e6 !important; }
+    .vis-timeline {
+        border: 1px solid grey !important;
+        border-radius: 10px;
+        box-shadow: rgba(185, 181, 181, 0.45) 0px 10px 15px -10px;
+    }
+    .vis-label.vis-nested-group { border: none; }
+    .vis-group { border: none !important; }
+  </style>
+  <script type="module" crossorigin src="/assets/index-FLyxovsB.js"></script>
+  <link rel="stylesheet" crossorigin href="/assets/index-5-TIXSrZ.css">
+</head>
+<body>
+
+  <div class="split">
+    <!-- Left side -->
+    <div id="questionnaire">
+      <h2>Questionnaire (Enketo)</h2>
+      <div id="app"></div>
+    </div>
+
+    <!-- Right side -->
+    <div id="trajectories" class="split vertical">
+        <div id="canvas">
+            <h2>Calendrier de vie</h2>
+            <div id="timeline"></div>  
+        </div>
+        
+        <div id="bricks">
+            <h2>Synthèse</h2>
+            <div id="moreInfos"></div>
+        </div>  
+    </div>
+  </div>
+
+</body>
+</html>

@@ -1,0 +1,17 @@
+{
+  "name": "enketo-24_03_2026",
+  "version": "1.0.0",
+  "description": "",
+  "main": "convert.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "csv-parse": "^6.2.1",
+    "enketo-core": "^5.18.1",
+    "enketo-transformer": "^4.2.0",
+    "libxslt": "^0.10.2"
+  }
+}

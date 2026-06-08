@@ -1,0 +1,1564 @@
+<?xml version="1.0"?>
+<h:html xmlns="http://www.w3.org/2002/xforms" xmlns:h="http://www.w3.org/1999/xhtml" xmlns:ev="http://www.w3.org/2001/xml-events" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:jr="http://openrosa.org/javarosa" xmlns:orx="http://openrosa.org/xforms" xmlns:odk="http://www.opendatakit.org/xforms">
+  <h:head>
+    <h:title>JSON</h:title>
+    <model odk:xforms-version="1.0.0">
+      <instance>
+        <aTUogkKQGXyf3948YuyEPe id="aTUogkKQGXyf3948YuyEPe">
+          <debut_enquete>
+            <intro_enquete/>
+            <annee_naissance/>
+          </debut_enquete>
+          <grp_traj_residentielle>
+            <A_commune>
+              <introduction_commune>
+                <intro_commune/>
+              </introduction_commune>
+              <E_commune_1>
+                <Q_commune_1/>
+                <D_pays_c1>250</D_pays_c1>
+                <V_commune_1/>
+                <D_dept_c1/>
+              </E_commune_1>
+              <filtre_commune>
+                <toujours_vecu_commune/>
+              </filtre_commune>
+              <E_commune_n jr:template="">
+                <id_commune/>
+                <Q_commune_n/>
+                <D_pays_cn/>
+                <V_commune_n/>
+                <D_dept_cn/>
+                <SD_cn/>
+                <annee_arrivee_commune/>
+                <age_arrivee_commune/>
+                <note_arrivee_commune/>
+                <str_date_arrivee/>
+                <multi_residence/>
+                <communes_list/>
+              </E_commune_n>
+              <E_commune_n>
+                <id_commune/>
+                <Q_commune_n/>
+                <D_pays_cn/>
+                <V_commune_n/>
+                <D_dept_cn/>
+                <SD_cn/>
+                <annee_arrivee_commune/>
+                <age_arrivee_commune/>
+                <note_arrivee_commune/>
+                <str_date_arrivee/>
+                <multi_residence/>
+                <communes_list/>
+              </E_commune_n>
+            </A_commune>
+            <A_logement>
+              <introduction_logement>
+                <intro_logement/>
+              </introduction_logement>
+              <repeat_logements_global_count/>
+              <repeat_logements_global jr:template="">
+                <pos2/>
+                <display_year/>
+                <display_name/>
+                <group_ws7ip90>
+                  <group_pd2yp93>
+                    <a_display_name_di_ns_le_m_me_l/>
+                  </group_pd2yp93>
+                  <E_logement_n jr:template="">
+                    <group_jr34s08>
+                      <Q_logement_n/>
+                      <ST_logement_n/>
+                      <SD_ln/>
+                      <annee_arrivee_logement/>
+                      <age_arrivee_logement/>
+                      <note_arrivee_logement/>
+                      <ED_ln/>
+                      <annee_depart_logement/>
+                      <age_depart_logement/>
+                      <note_depart_logement/>
+                    </group_jr34s08>
+                    <A_status_res>
+                      <E_status_res>
+                        <Q_statut_res/>
+                        <V_statut_res1/>
+                        <V_statut_res2/>
+                      </E_status_res>
+                    </A_status_res>
+                  </E_logement_n>
+                  <E_logement_n>
+                    <group_jr34s08>
+                      <Q_logement_n/>
+                      <ST_logement_n/>
+                      <SD_ln/>
+                      <annee_arrivee_logement/>
+                      <age_arrivee_logement/>
+                      <note_arrivee_logement/>
+                      <ED_ln/>
+                      <annee_depart_logement/>
+                      <age_depart_logement/>
+                      <note_depart_logement/>
+                    </group_jr34s08>
+                    <A_status_res>
+                      <E_status_res>
+                        <Q_statut_res/>
+                        <V_statut_res1/>
+                        <V_statut_res2/>
+                      </E_status_res>
+                    </A_status_res>
+                  </E_logement_n>
+                </group_ws7ip90>
+              </repeat_logements_global>
+              <repeat_logements_global>
+                <pos2/>
+                <display_year/>
+                <display_name/>
+                <group_ws7ip90>
+                  <group_pd2yp93>
+                    <a_display_name_di_ns_le_m_me_l/>
+                  </group_pd2yp93>
+                  <E_logement_n>
+                    <group_jr34s08>
+                      <Q_logement_n/>
+                      <ST_logement_n/>
+                      <SD_ln/>
+                      <annee_arrivee_logement/>
+                      <age_arrivee_logement/>
+                      <note_arrivee_logement/>
+                      <ED_ln/>
+                      <annee_depart_logement/>
+                      <age_depart_logement/>
+                      <note_depart_logement/>
+                    </group_jr34s08>
+                    <A_status_res>
+                      <E_status_res>
+                        <Q_statut_res/>
+                        <V_statut_res1/>
+                        <V_statut_res2/>
+                      </E_status_res>
+                    </A_status_res>
+                  </E_logement_n>
+                </group_ws7ip90>
+              </repeat_logements_global>
+            </A_logement>
+          </grp_traj_residentielle>
+          <grp_traj_scolaire>
+            <group_mq8st48>
+              <Introduction_scolaire/>
+            </group_mq8st48>
+            <group_ao4nw75>
+              <Quel_est_le_dipl_me_ue_vous_ayez_obtenu_/>
+              <En_quelle_ann_e_avez_us_obtenu_ce_dip_me_/>
+            </group_ao4nw75>
+            <A_Niveau_scolaire>
+              <E_niveau_scolaire_n jr:template="">
+                <Pouvez_vous_pr_ciser_pas_suivi_d_tudes_/>
+                <D_type_periode/>
+                <V_niveau_scolaire_1/>
+                <V_niveau_scolaire_2/>
+                <SD_scol/>
+                <ED_scol/>
+                <A_type_etablissement>
+                  <E_type_etablissement>
+                    <V_type_etablissement_n/>
+                  </E_type_etablissement>
+                </A_type_etablissement>
+              </E_niveau_scolaire_n>
+              <E_niveau_scolaire_n>
+                <Pouvez_vous_pr_ciser_pas_suivi_d_tudes_/>
+                <D_type_periode/>
+                <V_niveau_scolaire_1/>
+                <V_niveau_scolaire_2/>
+                <SD_scol/>
+                <ED_scol/>
+                <A_type_etablissement>
+                  <E_type_etablissement>
+                    <V_type_etablissement_n/>
+                  </E_type_etablissement>
+                </A_type_etablissement>
+              </E_niveau_scolaire_n>
+            </A_Niveau_scolaire>
+            <Qu_avez_vous_fait_l_a_fin_de_vos_tudes_/>
+          </grp_traj_scolaire>
+          <grp_traj_pro>
+            <intro_pro/>
+            <grp_act_pro>
+              <act_pro_actuelle/>
+              <metier_actuel/>
+              <statut_actuel/>
+              <type_emploi_actuel/>
+              <activite_etab_actuel/>
+              <situation_actuelle/>
+              <deja_travaille/>
+            </grp_act_pro>
+            <A_activite>
+              <E_activite_1>
+                <SD_activite_1/>
+                <V_activite_1/>
+              </E_activite_1>
+              <A_Status_Emploi>
+                <E_status_1>
+                  <V_status_emploi_1/>
+                </E_status_1>
+              </A_Status_Emploi>
+              <A_type_emploi>
+                <E_type_1>
+                  <V_type_emploi_1/>
+                </E_type_1>
+              </A_type_emploi>
+              <A_activite_entreprise>
+                <E_Activite_entreprise_1>
+                  <V_activite_entreprise_1/>
+                </E_Activite_entreprise_1>
+              </A_activite_entreprise>
+              <group_sc3ki23>
+                <job_en_cours/>
+              </group_sc3ki23>
+              <Quand_avez_vous_term_e_premi_re_activit_/>
+              <E_activite_n jr:template="">
+                <Q_activite_n/>
+                <SD_activite_n/>
+                <V_activite_n/>
+                <A_Status_Emploi2>
+                  <E_status_n>
+                    <V_status_n/>
+                  </E_status_n>
+                </A_Status_Emploi2>
+                <A_type_emploi2>
+                  <E_type_n>
+                    <V_type_emploi_n/>
+                  </E_type_n>
+                </A_type_emploi2>
+                <A_activite_entreprise2>
+                  <E_Activite_entreprise_n>
+                    <V_activite_entreprise_n/>
+                  </E_Activite_entreprise_n>
+                </A_activite_entreprise2>
+                <group_sc3ki23_001>
+                  <job_en_cours_n/>
+                </group_sc3ki23_001>
+                <Quand_avez_vous_term_e_premi_re_activit__001/>
+              </E_activite_n>
+              <E_activite_n>
+                <Q_activite_n/>
+                <SD_activite_n/>
+                <V_activite_n/>
+                <A_Status_Emploi2>
+                  <E_status_n>
+                    <V_status_n/>
+                  </E_status_n>
+                </A_Status_Emploi2>
+                <A_type_emploi2>
+                  <E_type_n>
+                    <V_type_emploi_n/>
+                  </E_type_n>
+                </A_type_emploi2>
+                <A_activite_entreprise2>
+                  <E_Activite_entreprise_n>
+                    <V_activite_entreprise_n/>
+                  </E_Activite_entreprise_n>
+                </A_activite_entreprise2>
+                <group_sc3ki23_001>
+                  <job_en_cours_n/>
+                </group_sc3ki23_001>
+                <Quand_avez_vous_term_e_premi_re_activit__001/>
+              </E_activite_n>
+              <group_pw35g06>
+                <Pouvez_vous_me_pr_ci_ssait_de_p_riodes_de/>
+              </group_pw35g06>
+            </A_activite>
+          </grp_traj_pro>
+          <grp_famille>
+            <intro_parents/>
+            <grp_pere>
+              <pere_vivant/>
+              <pere_deces/>
+              <age_pere_deces/>
+              <note_age_pere/>
+            </grp_pere>
+            <grp_cohab_pere>
+              <debut_cohab_pere/>
+              <age_debut_cohab_pere/>
+              <fin_cohab_pere/>
+              <age_fin_cohab_pere/>
+              <note_cohab_pere/>
+            </grp_cohab_pere>
+            <grp_mere>
+              <mere_vivante/>
+              <mere_deces/>
+              <age_mere_deces/>
+              <note_age_mere/>
+            </grp_mere>
+            <grp_cohab_mere>
+              <debut_cohab_mere/>
+              <age_debut_cohab_mere/>
+              <fin_cohab_mere/>
+              <age_fin_cohab_mere/>
+              <note_cohab_mere/>
+            </grp_cohab_mere>
+            <grp_foyer_fratrie>
+              <depart_foyer/>
+              <freres_soeurs/>
+            </grp_foyer_fratrie>
+            <intro_matrimoniale/>
+            <grp_couple_global>
+              <couple_actuel/>
+              <couple_passe/>
+              <a_vecu_couple/>
+            </grp_couple_global>
+            <nb_conjoints/>
+            <rep_conjoints jr:template="">
+              <grp_conjoint_id>
+                <prenom_conjoint/>
+                <annee_naissance_conj/>
+              </grp_conjoint_id>
+              <intro_couple/>
+              <grp_dates_union>
+                <conj_debut_union/>
+                <age_debut_union/>
+                <conj_union_libre/>
+                <conj_marie/>
+                <conj_tjrs_ensemble/>
+                <conj_fin_union/>
+                <conj_rupture_type/>
+                <note_age_union/>
+              </grp_dates_union>
+              <rep_cohab_conj jr:template="">
+                <debut_cohab_conj/>
+                <fin_cohab_conj/>
+              </rep_cohab_conj>
+            </rep_conjoints>
+            <rep_conjoints>
+              <grp_conjoint_id>
+                <prenom_conjoint/>
+                <annee_naissance_conj/>
+              </grp_conjoint_id>
+              <intro_couple/>
+              <grp_dates_union>
+                <conj_debut_union/>
+                <age_debut_union/>
+                <conj_union_libre/>
+                <conj_marie/>
+                <conj_tjrs_ensemble/>
+                <conj_fin_union/>
+                <conj_rupture_type/>
+                <note_age_union/>
+              </grp_dates_union>
+              <rep_cohab_conj>
+                <debut_cohab_conj/>
+                <fin_cohab_conj/>
+              </rep_cohab_conj>
+            </rep_conjoints>
+            <intro_enfant/>
+            <a_enfants/>
+            <nb_enfants/>
+            <rep_enfants jr:template="">
+              <grp_enfant_attr>
+                <prenom_enfant/>
+                <annee_naissance_enf/>
+                <age_naissance_enfant/>
+                <sexe_enfant/>
+                <deces_enfant/>
+                <note_age_naissance/>
+              </grp_enfant_attr>
+              <group_wg4xu13>
+                <Ann_e_de_d_but/>
+                <Ann_e_de_fin/>
+              </group_wg4xu13>
+            </rep_enfants>
+            <rep_enfants>
+              <grp_enfant_attr>
+                <prenom_enfant/>
+                <annee_naissance_enf/>
+                <age_naissance_enfant/>
+                <sexe_enfant/>
+                <deces_enfant/>
+                <note_age_naissance/>
+              </grp_enfant_attr>
+              <group_wg4xu13>
+                <Ann_e_de_d_but/>
+                <Ann_e_de_fin/>
+              </group_wg4xu13>
+            </rep_enfants>
+          </grp_famille>
+          <meta>
+            <instanceID/>
+          </meta>
+        </aTUogkKQGXyf3948YuyEPe>
+      </instance>
+      <instance id="countries" src="jr://file-csv/countries.csv"/>
+      <instance id="oui_non">
+        <root>
+          <item>
+            <name>oui</name>
+            <label>Oui</label>
+          </item>
+          <item>
+            <name>non</name>
+            <label>Non</label>
+          </item>
+        </root>
+      </instance>
+      <instance id="ud12t21">
+        <root>
+          <item>
+            <name>oui</name>
+            <label>Oui</label>
+          </item>
+          <item>
+            <name>non</name>
+            <label>Non</label>
+          </item>
+        </root>
+      </instance>
+      <instance id="bn7yc59">
+        <root>
+          <item>
+            <name>maison</name>
+            <label>Maison</label>
+          </item>
+          <item>
+            <name>appartement</name>
+            <label>Appartement</label>
+          </item>
+          <item>
+            <name>autre</name>
+            <label>Autre</label>
+          </item>
+        </root>
+      </instance>
+      <instance id="ro0ok06">
+        <root>
+          <item>
+            <name>log__au_domicile_des_parents</name>
+            <label>Logé au domicile des parents</label>
+          </item>
+          <item>
+            <name>locataire</name>
+            <label>Locataire</label>
+          </item>
+          <item>
+            <name>propri_taire_ou_acc_dant___la_propri_t</name>
+            <label>Propriétaire ou accédant à la propriété</label>
+          </item>
+          <item>
+            <name>log__par_l_employeur</name>
+            <label>Logé par l'employeur</label>
+          </item>
+          <item>
+            <name>log____titre_gracieux__logement_gratuit</name>
+            <label>Logé à titre gracieux, logement gratuit</label>
+          </item>
+        </root>
+      </instance>
+      <instance id="fl3db33">
+        <root>
+          <item>
+            <name>log__au_domicile_des_parents</name>
+            <label>Logé au domicile des parents</label>
+          </item>
+          <item>
+            <name>locataire</name>
+            <label>Locataire</label>
+          </item>
+          <item>
+            <name>propri_taire_ou_acc_dant___la_propri_t</name>
+            <label>Propriétaire ou accédant à la propriété</label>
+          </item>
+          <item>
+            <name>log__par_l_employeur</name>
+            <label>Logé par l'employeur</label>
+          </item>
+          <item>
+            <name>log____titre_gracieux__logement_gratuit</name>
+            <label>Logé à titre gracieux, logement gratuit</label>
+          </item>
+        </root>
+      </instance>
+      <instance id="eg5vl41">
+        <root>
+          <item>
+            <name>aucun_dipl_me</name>
+            <label>Aucun diplôme</label>
+            <order>0</order>
+          </item>
+          <item>
+            <name>cep__certificat_d_tudes_primaires__ou_di</name>
+            <label>CEP (certificat d'études primaires) ou diplôme étranger de même niveau</label>
+            <order>1</order>
+          </item>
+          <item>
+            <name>brevet_des_coll_ge__bepc__brevet__l_ment</name>
+            <label>Brevet des collège, BEPC, brevet élémentaire ou diplôme étranger de même niveau</label>
+            <order>2</order>
+          </item>
+          <item>
+            <name>cap__bep_ou_dipl_me_de_ce_niveau</name>
+            <label>CAP, BEP ou diplôme de ce niveau</label>
+            <order>3</order>
+          </item>
+          <item>
+            <name>baccalaur_at_technologique_ou_profession</name>
+            <label>Baccalauréat technologique ou professionnel ou diplôme de ce niveau</label>
+            <order>4</order>
+          </item>
+          <item>
+            <name>baccalaur_at_g_n_ral__s_ries_a__b__c__d_</name>
+            <label>Baccalauréat général (séries A, B, C, D, E, ES, L, S), brevet supérieur, capacité en droit, DAEU, ou diplôme étranger de même niveau</label>
+            <order>5</order>
+          </item>
+          <item>
+            <name>dipl_me_de_niveau_bac_2</name>
+            <label>Diplôme de niveau Bac+2</label>
+            <order>6</order>
+          </item>
+          <item>
+            <name>dipl_me_de_niveau_sup_rieur___bac_2</name>
+            <label>Diplôme de niveau supérieur à Bac+2</label>
+            <order>7</order>
+          </item>
+        </root>
+      </instance>
+      <instance id="hl6zc56">
+        <root>
+          <item>
+            <name>scolarit</name>
+            <label>Scolarité</label>
+          </item>
+          <item>
+            <name>absence_de_scolarit</name>
+            <label>Absence de scolarité</label>
+          </item>
+        </root>
+      </instance>
+      <instance id="lh4jq98">
+        <root>
+          <item>
+            <name>emploi</name>
+            <label>Emploi</label>
+          </item>
+          <item>
+            <name>ch_mage</name>
+            <label>Chômage</label>
+          </item>
+          <item>
+            <name>militaire</name>
+            <label>Militaire</label>
+          </item>
+          <item>
+            <name>maladie</name>
+            <label>Maladie</label>
+          </item>
+          <item>
+            <name>au_foyer__autre_inactifs</name>
+            <label>Au foyer, autre inactifs</label>
+          </item>
+        </root>
+      </instance>
+      <instance id="bx0os15">
+        <root>
+          <item>
+            <name>public</name>
+            <label>Public</label>
+          </item>
+          <item>
+            <name>priv</name>
+            <label>Privé</label>
+          </item>
+          <item>
+            <name>les_deux</name>
+            <label>Public et privé</label>
+          </item>
+        </root>
+      </instance>
+      <instance id="xr77s51">
+        <root>
+          <item>
+            <name>option_1</name>
+            <label>Option 1</label>
+          </item>
+          <item>
+            <name>option_2</name>
+            <label>Option 2</label>
+          </item>
+        </root>
+      </instance>
+      <instance id="yes_no">
+        <root>
+          <item>
+            <name>yes</name>
+            <label>Oui</label>
+          </item>
+          <item>
+            <name>no</name>
+            <label>Non</label>
+          </item>
+        </root>
+      </instance>
+      <instance id="statut_pro">
+        <root>
+          <item>
+            <name>salarie</name>
+            <label>Salarié</label>
+          </item>
+          <item>
+            <name>independant</name>
+            <label>Indépendant</label>
+          </item>
+          <item>
+            <name>chef_entreprise</name>
+            <label>Chef d'entreprise</label>
+          </item>
+          <item>
+            <name>aide_familiale</name>
+            <label>Aide familiale</label>
+          </item>
+        </root>
+      </instance>
+      <instance id="type_emploi">
+        <root>
+          <item>
+            <name>apprentissage</name>
+            <label>Apprentissage</label>
+          </item>
+          <item>
+            <name>interim</name>
+            <label>Intérim</label>
+          </item>
+          <item>
+            <name>stage</name>
+            <label>Stage rémunéré</label>
+          </item>
+          <item>
+            <name>cdd</name>
+            <label>CDD, Saisonnier, Vacataire</label>
+          </item>
+          <item>
+            <name>cdi</name>
+            <label>CDI, titulaire de la fonction publique</label>
+          </item>
+        </root>
+      </instance>
+      <instance id="situation_act">
+        <root>
+          <item>
+            <name>chomeur</name>
+            <label>Chômeur</label>
+          </item>
+          <item>
+            <name>etudiant</name>
+            <label>Elève, étudiant</label>
+          </item>
+          <item>
+            <name>militaire</name>
+            <label>Militaire du contingent</label>
+          </item>
+          <item>
+            <name>retraite</name>
+            <label>Retraité</label>
+          </item>
+          <item>
+            <name>retire_affaires</name>
+            <label>Retiré des affaires</label>
+          </item>
+          <item>
+            <name>foyer</name>
+            <label>Femme au foyer</label>
+          </item>
+          <item>
+            <name>autre_inactif</name>
+            <label>Autre inactif</label>
+          </item>
+          <item>
+            <name>alternance</name>
+            <label>Alternance emploi/inactivité pendant plusieurs années</label>
+          </item>
+          <item>
+            <name>multi_prof</name>
+            <label>Plusieurs professions pendant moins d'un an...</label>
+          </item>
+        </root>
+      </instance>
+      <instance id="sa55v49">
+        <root>
+          <item>
+            <name>option_1</name>
+            <label>Option 1</label>
+          </item>
+          <item>
+            <name>option_2</name>
+            <label>Option 2</label>
+          </item>
+        </root>
+      </instance>
+      <instance id="type_rupture">
+        <root>
+          <item>
+            <name>separe</name>
+            <label>Séparation</label>
+          </item>
+          <item>
+            <name>divorce</name>
+            <label>Divorce</label>
+          </item>
+          <item>
+            <name>autre</name>
+            <label>Autre (ex: décès)</label>
+          </item>
+        </root>
+      </instance>
+      <instance id="sexe">
+        <root>
+          <item>
+            <name>masculin</name>
+            <label>Masculin</label>
+          </item>
+          <item>
+            <name>feminin</name>
+            <label>Féminin</label>
+          </item>
+        </root>
+      </instance>
+      <bind nodeset="/aTUogkKQGXyf3948YuyEPe/debut_enquete" required="false()"/>
+      <bind nodeset="/aTUogkKQGXyf3948YuyEPe/debut_enquete/intro_enquete" readonly="true()" type="string" required="false()"/>
+      <bind nodeset="/aTUogkKQGXyf3948YuyEPe/debut_enquete/annee_naissance" type="int" required="true()" constraint=". &gt; 1900 and . &lt;= 2026" jr:constraintMsg="L'année ne peut pas dépasser l'année en cours"/>
+      <bind nodeset="/aTUogkKQGXyf3948YuyEPe/grp_traj_residentielle" required="false()"/>
+      <bind nodeset="/aTUogkKQGXyf3948YuyEPe/grp_traj_residentielle/A_commune" required="false()"/>
+      <bind nodeset="/aTUogkKQGXyf3948YuyEPe/grp_traj_residentielle/A_commune/introduction_commune" required="false()"/>
+      <bind nodeset="/aTUogkKQGXyf3948YuyEPe/grp_traj_residentielle/A_commune/introduction_commune/intro_commune" readonly="true()" type="string" required="false()"/>
+      <bind nodeset="/aTUogkKQGXyf3948YuyEPe/grp_traj_residentielle/A_commune/E_commune_1" required="false()"/>
+      <bind nodeset="/aTUogkKQGXyf3948YuyEPe/grp_traj_residentielle/A_commune/E_commune_1/Q_commune_1" readonly="true()" type="string" required="false()"/>
+      <bind nodeset="/aTUogkKQGXyf3948YuyEPe/grp_traj_residentielle/A_commune/E_commune_1/D_pays_c1" type="string" required="true()"/>
+      <bind nodeset="/aTUogkKQGXyf3948YuyEPe/grp_traj_residentielle/A_commune/E_commune_1/V_commune_1" type="string" relevant=" /aTUogkKQGXyf3948YuyEPe/grp_traj_residentielle/A_commune/E_commune_1/D_pays_c1  = '250'" required="true()"/>
+      <bind nodeset="/aTUogkKQGXyf3948YuyEPe/grp_traj_residentielle/A_commune/E_commune_1/D_dept_c1" type="string" relevant=" /aTUogkKQGXyf3948YuyEPe/grp_traj_residentielle/A_commune/E_commune_1/D_pays_c1  = '250'" required="true()"/>
+      <bind nodeset="/aTUogkKQGXyf3948YuyEPe/grp_traj_residentielle/A_commune/filtre_commune" required="false()"/>
+      <bind nodeset="/aTUogkKQGXyf3948YuyEPe/grp_traj_residentielle/A_commune/filtre_commune/toujours_vecu_commune" type="string" required="true()"/>
+      <bind nodeset="/aTUogkKQGXyf3948YuyEPe/grp_traj_residentielle/A_commune/E_commune_n" relevant=" /aTUogkKQGXyf3948YuyEPe/grp_traj_residentielle/A_commune/filtre_commune/toujours_vecu_commune  = 'non'" required="true()"/>
+      <bind nodeset="/aTUogkKQGXyf3948YuyEPe/grp_traj_residentielle/A_commune/E_commune_n/id_commune" type="string" required="false()" calculate="position(..)"/>
+      <bind nodeset="/aTUogkKQGXyf3948YuyEPe/grp_traj_residentielle/A_commune/E_commune_n/Q_commune_n" readonly="true()" type="string" required="false()"/>
+      <bind nodeset="/aTUogkKQGXyf3948YuyEPe/grp_traj_residentielle/A_commune/E_commune_n/D_pays_cn" type="string" required="true()"/>
+      <bind nodeset="/aTUogkKQGXyf3948YuyEPe/grp_traj_residentielle/A_commune/E_commune_n/V_commune_n" type="string" relevant=" ../D_pays_cn  = '250'" required="true()"/>
+      <bind nodeset="/aTUogkKQGXyf3948YuyEPe/grp_traj_residentielle/A_commune/E_commune_n/D_dept_cn" type="string" relevant=" ../D_pays_cn  = '250'" required="true()"/>
+      <bind nodeset="/aTUogkKQGXyf3948YuyEPe/grp_traj_residentielle/A_commune/E_commune_n/SD_cn" type="int" required="false()" constraint=". &lt; 150 or (. &gt; 1900 and . &lt;= 2026) or . = 9999" jr:constraintMsg="Année ou Âge invalide !"/>
+      <bind nodeset="/aTUogkKQGXyf3948YuyEPe/grp_traj_residentielle/A_commune/E_commune_n/annee_arrivee_commune" type="string" required="false()" calculate="if( ../SD_cn  = 9999, 9999, if( ../SD_cn  &gt; 150,  ../SD_cn ,  /aTUogkKQGXyf3948YuyEPe/debut_enquete/annee_naissance  +  ../SD_cn ))"/>
+      <bind nodeset="/aTUogkKQGXyf3948YuyEPe/grp_traj_residentielle/A_commune/E_commune_n/age_arrivee_commune" type="string" required="false()" calculate="if( ../SD_cn  = 9999, 9999, if( ../SD_cn  &lt; 150,  ../SD_cn ,  ../SD_cn  -  /aTUogkKQGXyf3948YuyEPe/debut_enquete/annee_naissance ))"/>
+      <bind nodeset="/aTUogkKQGXyf3948YuyEPe/grp_traj_residentielle/A_commune/E_commune_n/note_arrivee_commune" readonly="true()" type="string" required="false()"/>
+      <bind nodeset="/aTUogkKQGXyf3948YuyEPe/grp_traj_residentielle/A_commune/E_commune_n/str_date_arrivee" type="string" required="false()" calculate="string( ../annee_arrivee_commune )"/>
+      <bind nodeset="/aTUogkKQGXyf3948YuyEPe/grp_traj_residentielle/A_commune/E_commune_n/multi_residence" type="string" required="true()"/>
+      <bind nodeset="/aTUogkKQGXyf3948YuyEPe/grp_traj_residentielle/A_commune/E_commune_n/communes_list" type="string" required="false()" calculate="join(' ', ../V_commune_n )"/>
+      <bind nodeset="/aTUogkKQGXyf3948YuyEPe/grp_traj_residentielle/A_logement" required="false()"/>
+      <bind nodeset="/aTUogkKQGXyf3948YuyEPe/grp_traj_residentielle/A_logement/introduction_logement" required="false()"/>
+      <bind nodeset="/aTUogkKQGXyf3948YuyEPe/grp_traj_residentielle/A_logement/introduction_logement/intro_logement" readonly="true()" type="string" required="false()"/>
+      <bind nodeset="/aTUogkKQGXyf3948YuyEPe/grp_traj_residentielle/A_logement/repeat_logements_global_count" type="string" readonly="true()" calculate="count( /aTUogkKQGXyf3948YuyEPe/grp_traj_residentielle/A_commune/E_commune_n )"/>
+      <bind nodeset="/aTUogkKQGXyf3948YuyEPe/grp_traj_residentielle/A_logement/repeat_logements_global" required="false()"/>
+      <bind nodeset="/aTUogkKQGXyf3948YuyEPe/grp_traj_residentielle/A_logement/repeat_logements_global/pos2" type="string" required="false()" calculate="position(..)"/>
+      <bind nodeset="/aTUogkKQGXyf3948YuyEPe/grp_traj_residentielle/A_logement/repeat_logements_global/display_year" type="string" required="false()" calculate="indexed-repeat( /aTUogkKQGXyf3948YuyEPe/grp_traj_residentielle/A_commune/E_commune_n/str_date_arrivee ,  /aTUogkKQGXyf3948YuyEPe/grp_traj_residentielle/A_commune/E_commune_n ,  ../pos2 )"/>
+      <bind nodeset="/aTUogkKQGXyf3948YuyEPe/grp_traj_residentielle/A_logement/repeat_logements_global/display_name" type="string" required="false()" calculate="indexed-repeat( /aTUogkKQGXyf3948YuyEPe/grp_traj_residentielle/A_commune/E_commune_n/V_commune_n ,  /aTUogkKQGXyf3948YuyEPe/grp_traj_residentielle/A_commune/E_commune_n ,  ../pos2 )"/>
+      <bind nodeset="/aTUogkKQGXyf3948YuyEPe/grp_traj_residentielle/A_logement/repeat_logements_global/group_ws7ip90" required="false()"/>
+      <bind nodeset="/aTUogkKQGXyf3948YuyEPe/grp_traj_residentielle/A_logement/repeat_logements_global/group_ws7ip90/group_pd2yp93" required="false()"/>
+      <bind nodeset="/aTUogkKQGXyf3948YuyEPe/grp_traj_residentielle/A_logement/repeat_logements_global/group_ws7ip90/group_pd2yp93/a_display_name_di_ns_le_m_me_l" type="string" required="false()"/>
+      <bind nodeset="/aTUogkKQGXyf3948YuyEPe/grp_traj_residentielle/A_logement/repeat_logements_global/group_ws7ip90/E_logement_n" required="false()"/>
+      <bind nodeset="/aTUogkKQGXyf3948YuyEPe/grp_traj_residentielle/A_logement/repeat_logements_global/group_ws7ip90/E_logement_n/group_jr34s08" required="false()"/>
+      <bind nodeset="/aTUogkKQGXyf3948YuyEPe/grp_traj_residentielle/A_logement/repeat_logements_global/group_ws7ip90/E_logement_n/group_jr34s08/Q_logement_n" readonly="true()" type="string" required="false()"/>
+      <bind nodeset="/aTUogkKQGXyf3948YuyEPe/grp_traj_residentielle/A_logement/repeat_logements_global/group_ws7ip90/E_logement_n/group_jr34s08/ST_logement_n" type="string" required="false()"/>
+      <bind nodeset="/aTUogkKQGXyf3948YuyEPe/grp_traj_residentielle/A_logement/repeat_logements_global/group_ws7ip90/E_logement_n/group_jr34s08/SD_ln" type="int" required="false()" constraint=". &lt; 150 or (. &gt; 1900 and . &lt;= 2026) or . = 9999" jr:constraintMsg="Année ou Âge invalide !"/>
+      <bind nodeset="/aTUogkKQGXyf3948YuyEPe/grp_traj_residentielle/A_logement/repeat_logements_global/group_ws7ip90/E_logement_n/group_jr34s08/annee_arrivee_logement" type="string" required="false()" calculate="if( ../SD_ln  = 9999, 9999, if( ../SD_ln  &gt; 150,  ../SD_ln ,  /aTUogkKQGXyf3948YuyEPe/debut_enquete/annee_naissance  +  ../SD_ln ))"/>
+      <bind nodeset="/aTUogkKQGXyf3948YuyEPe/grp_traj_residentielle/A_logement/repeat_logements_global/group_ws7ip90/E_logement_n/group_jr34s08/age_arrivee_logement" type="string" required="false()" calculate="if( ../SD_ln  = 9999, 9999, if( ../SD_ln  &lt; 150,  ../SD_ln ,  ../SD_ln  -  /aTUogkKQGXyf3948YuyEPe/debut_enquete/annee_naissance ))"/>
+      <bind nodeset="/aTUogkKQGXyf3948YuyEPe/grp_traj_residentielle/A_logement/repeat_logements_global/group_ws7ip90/E_logement_n/group_jr34s08/note_arrivee_logement" readonly="true()" type="string" required="false()"/>
+      <bind nodeset="/aTUogkKQGXyf3948YuyEPe/grp_traj_residentielle/A_logement/repeat_logements_global/group_ws7ip90/E_logement_n/group_jr34s08/ED_ln" type="int" required="false()" constraint=". &lt; 150 or (. &gt; 1900 and . &lt;= 2026) or . = 9999" jr:constraintMsg="Année ou Âge invalide !"/>
+      <bind nodeset="/aTUogkKQGXyf3948YuyEPe/grp_traj_residentielle/A_logement/repeat_logements_global/group_ws7ip90/E_logement_n/group_jr34s08/annee_depart_logement" type="string" required="false()" calculate="if( ../ED_ln  = 9999, 9999, if( ../ED_ln  &gt; 150,  ../ED_ln ,  /aTUogkKQGXyf3948YuyEPe/debut_enquete/annee_naissance  +  ../ED_ln ))"/>
+      <bind nodeset="/aTUogkKQGXyf3948YuyEPe/grp_traj_residentielle/A_logement/repeat_logements_global/group_ws7ip90/E_logement_n/group_jr34s08/age_depart_logement" type="string" required="false()" calculate="if( ../ED_ln  = 9999, 9999, if( ../ED_ln  &lt; 150,  ../ED_ln ,  ../ED_ln  -  /aTUogkKQGXyf3948YuyEPe/debut_enquete/annee_naissance ))"/>
+      <bind nodeset="/aTUogkKQGXyf3948YuyEPe/grp_traj_residentielle/A_logement/repeat_logements_global/group_ws7ip90/E_logement_n/group_jr34s08/note_depart_logement" readonly="true()" type="string" required="false()"/>
+      <bind nodeset="/aTUogkKQGXyf3948YuyEPe/grp_traj_residentielle/A_logement/repeat_logements_global/group_ws7ip90/E_logement_n/A_status_res" required="false()"/>
+      <bind nodeset="/aTUogkKQGXyf3948YuyEPe/grp_traj_residentielle/A_logement/repeat_logements_global/group_ws7ip90/E_logement_n/A_status_res/E_status_res" required="false()"/>
+      <bind nodeset="/aTUogkKQGXyf3948YuyEPe/grp_traj_residentielle/A_logement/repeat_logements_global/group_ws7ip90/E_logement_n/A_status_res/E_status_res/Q_statut_res" readonly="true()" type="string" required="false()"/>
+      <bind nodeset="/aTUogkKQGXyf3948YuyEPe/grp_traj_residentielle/A_logement/repeat_logements_global/group_ws7ip90/E_logement_n/A_status_res/E_status_res/V_statut_res1" type="string" required="false()"/>
+      <bind nodeset="/aTUogkKQGXyf3948YuyEPe/grp_traj_residentielle/A_logement/repeat_logements_global/group_ws7ip90/E_logement_n/A_status_res/E_status_res/V_statut_res2" type="string" required="false()"/>
+      <bind nodeset="/aTUogkKQGXyf3948YuyEPe/grp_traj_scolaire" required="false()"/>
+      <bind nodeset="/aTUogkKQGXyf3948YuyEPe/grp_traj_scolaire/group_mq8st48" required="false()"/>
+      <bind nodeset="/aTUogkKQGXyf3948YuyEPe/grp_traj_scolaire/group_mq8st48/Introduction_scolaire" readonly="true()" type="string" required="false()"/>
+      <bind nodeset="/aTUogkKQGXyf3948YuyEPe/grp_traj_scolaire/group_ao4nw75" required="false()"/>
+      <bind nodeset="/aTUogkKQGXyf3948YuyEPe/grp_traj_scolaire/group_ao4nw75/Quel_est_le_dipl_me_ue_vous_ayez_obtenu_" type="string" required="false()"/>
+      <bind nodeset="/aTUogkKQGXyf3948YuyEPe/grp_traj_scolaire/group_ao4nw75/En_quelle_ann_e_avez_us_obtenu_ce_dip_me_" type="date" required="false()"/>
+      <bind nodeset="/aTUogkKQGXyf3948YuyEPe/grp_traj_scolaire/A_Niveau_scolaire" required="false()"/>
+      <bind nodeset="/aTUogkKQGXyf3948YuyEPe/grp_traj_scolaire/A_Niveau_scolaire/E_niveau_scolaire_n" required="false()"/>
+      <bind nodeset="/aTUogkKQGXyf3948YuyEPe/grp_traj_scolaire/A_Niveau_scolaire/E_niveau_scolaire_n/Pouvez_vous_pr_ciser_pas_suivi_d_tudes_" readonly="true()" type="string" required="false()"/>
+      <bind nodeset="/aTUogkKQGXyf3948YuyEPe/grp_traj_scolaire/A_Niveau_scolaire/E_niveau_scolaire_n/D_type_periode" type="string" required="false()"/>
+      <bind nodeset="/aTUogkKQGXyf3948YuyEPe/grp_traj_scolaire/A_Niveau_scolaire/E_niveau_scolaire_n/V_niveau_scolaire_1" type="string" relevant=" ../D_type_periode  = 'absence_de_scolarit'" required="false()"/>
+      <bind nodeset="/aTUogkKQGXyf3948YuyEPe/grp_traj_scolaire/A_Niveau_scolaire/E_niveau_scolaire_n/V_niveau_scolaire_2" type="string" required="false()"/>
+      <bind nodeset="/aTUogkKQGXyf3948YuyEPe/grp_traj_scolaire/A_Niveau_scolaire/E_niveau_scolaire_n/SD_scol" type="date" required="false()"/>
+      <bind nodeset="/aTUogkKQGXyf3948YuyEPe/grp_traj_scolaire/A_Niveau_scolaire/E_niveau_scolaire_n/ED_scol" type="date" required="false()"/>
+      <bind nodeset="/aTUogkKQGXyf3948YuyEPe/grp_traj_scolaire/A_Niveau_scolaire/E_niveau_scolaire_n/A_type_etablissement" required="false()"/>
+      <bind nodeset="/aTUogkKQGXyf3948YuyEPe/grp_traj_scolaire/A_Niveau_scolaire/E_niveau_scolaire_n/A_type_etablissement/E_type_etablissement" relevant=" ../../D_type_periode  = 'scolarit'" required="false()"/>
+      <bind nodeset="/aTUogkKQGXyf3948YuyEPe/grp_traj_scolaire/A_Niveau_scolaire/E_niveau_scolaire_n/A_type_etablissement/E_type_etablissement/V_type_etablissement_n" type="string" required="false()"/>
+      <bind nodeset="/aTUogkKQGXyf3948YuyEPe/grp_traj_scolaire/Qu_avez_vous_fait_l_a_fin_de_vos_tudes_" type="string" required="false()"/>
+      <bind nodeset="/aTUogkKQGXyf3948YuyEPe/grp_traj_pro" required="false()"/>
+      <bind nodeset="/aTUogkKQGXyf3948YuyEPe/grp_traj_pro/intro_pro" readonly="true()" type="string" required="false()"/>
+      <bind nodeset="/aTUogkKQGXyf3948YuyEPe/grp_traj_pro/grp_act_pro" required="false()"/>
+      <bind nodeset="/aTUogkKQGXyf3948YuyEPe/grp_traj_pro/grp_act_pro/act_pro_actuelle" type="string" required="true()"/>
+      <bind nodeset="/aTUogkKQGXyf3948YuyEPe/grp_traj_pro/grp_act_pro/metier_actuel" type="string" relevant=" /aTUogkKQGXyf3948YuyEPe/grp_traj_pro/grp_act_pro/act_pro_actuelle  = 'yes'" required="true()"/>
+      <bind nodeset="/aTUogkKQGXyf3948YuyEPe/grp_traj_pro/grp_act_pro/statut_actuel" type="string" relevant=" /aTUogkKQGXyf3948YuyEPe/grp_traj_pro/grp_act_pro/act_pro_actuelle  = 'yes'" required="true()"/>
+      <bind nodeset="/aTUogkKQGXyf3948YuyEPe/grp_traj_pro/grp_act_pro/type_emploi_actuel" type="string" relevant=" /aTUogkKQGXyf3948YuyEPe/grp_traj_pro/grp_act_pro/act_pro_actuelle  = 'yes'" required="true()"/>
+      <bind nodeset="/aTUogkKQGXyf3948YuyEPe/grp_traj_pro/grp_act_pro/activite_etab_actuel" type="string" relevant=" /aTUogkKQGXyf3948YuyEPe/grp_traj_pro/grp_act_pro/act_pro_actuelle  = 'yes'" required="true()"/>
+      <bind nodeset="/aTUogkKQGXyf3948YuyEPe/grp_traj_pro/grp_act_pro/situation_actuelle" type="string" relevant=" /aTUogkKQGXyf3948YuyEPe/grp_traj_pro/grp_act_pro/act_pro_actuelle  = 'no'" required="true()"/>
+      <bind nodeset="/aTUogkKQGXyf3948YuyEPe/grp_traj_pro/grp_act_pro/deja_travaille" type="string" relevant=" /aTUogkKQGXyf3948YuyEPe/grp_traj_pro/grp_act_pro/act_pro_actuelle  = 'no'" required="true()"/>
+      <bind nodeset="/aTUogkKQGXyf3948YuyEPe/grp_traj_pro/A_activite" relevant=" /aTUogkKQGXyf3948YuyEPe/grp_traj_pro/grp_act_pro/deja_travaille  = 'yes'" required="false()"/>
+      <bind nodeset="/aTUogkKQGXyf3948YuyEPe/grp_traj_pro/A_activite/E_activite_1" required="false()"/>
+      <bind nodeset="/aTUogkKQGXyf3948YuyEPe/grp_traj_pro/A_activite/E_activite_1/SD_activite_1" type="date" required="false()"/>
+      <bind nodeset="/aTUogkKQGXyf3948YuyEPe/grp_traj_pro/A_activite/E_activite_1/V_activite_1" type="string" required="false()"/>
+      <bind nodeset="/aTUogkKQGXyf3948YuyEPe/grp_traj_pro/A_activite/A_Status_Emploi" required="false()"/>
+      <bind nodeset="/aTUogkKQGXyf3948YuyEPe/grp_traj_pro/A_activite/A_Status_Emploi/E_status_1" required="false()"/>
+      <bind nodeset="/aTUogkKQGXyf3948YuyEPe/grp_traj_pro/A_activite/A_Status_Emploi/E_status_1/V_status_emploi_1" type="string" required="true()"/>
+      <bind nodeset="/aTUogkKQGXyf3948YuyEPe/grp_traj_pro/A_activite/A_type_emploi" required="false()"/>
+      <bind nodeset="/aTUogkKQGXyf3948YuyEPe/grp_traj_pro/A_activite/A_type_emploi/E_type_1" required="false()"/>
+      <bind nodeset="/aTUogkKQGXyf3948YuyEPe/grp_traj_pro/A_activite/A_type_emploi/E_type_1/V_type_emploi_1" type="string" required="true()"/>
+      <bind nodeset="/aTUogkKQGXyf3948YuyEPe/grp_traj_pro/A_activite/A_activite_entreprise" required="false()"/>
+      <bind nodeset="/aTUogkKQGXyf3948YuyEPe/grp_traj_pro/A_activite/A_activite_entreprise/E_Activite_entreprise_1" required="false()"/>
+      <bind nodeset="/aTUogkKQGXyf3948YuyEPe/grp_traj_pro/A_activite/A_activite_entreprise/E_Activite_entreprise_1/V_activite_entreprise_1" type="string" required="true()"/>
+      <bind nodeset="/aTUogkKQGXyf3948YuyEPe/grp_traj_pro/A_activite/group_sc3ki23" required="false()"/>
+      <bind nodeset="/aTUogkKQGXyf3948YuyEPe/grp_traj_pro/A_activite/group_sc3ki23/job_en_cours" type="string" required="true()"/>
+      <bind nodeset="/aTUogkKQGXyf3948YuyEPe/grp_traj_pro/A_activite/Quand_avez_vous_term_e_premi_re_activit_" type="date" relevant=" /aTUogkKQGXyf3948YuyEPe/grp_traj_pro/A_activite/group_sc3ki23/job_en_cours  = 'no'" required="false()"/>
+      <bind nodeset="/aTUogkKQGXyf3948YuyEPe/grp_traj_pro/A_activite/E_activite_n" relevant=" /aTUogkKQGXyf3948YuyEPe/grp_traj_pro/A_activite/group_sc3ki23/job_en_cours  = 'no'" required="false()"/>
+      <bind nodeset="/aTUogkKQGXyf3948YuyEPe/grp_traj_pro/A_activite/E_activite_n/Q_activite_n" readonly="true()" type="string" required="false()"/>
+      <bind nodeset="/aTUogkKQGXyf3948YuyEPe/grp_traj_pro/A_activite/E_activite_n/SD_activite_n" type="date" required="false()"/>
+      <bind nodeset="/aTUogkKQGXyf3948YuyEPe/grp_traj_pro/A_activite/E_activite_n/V_activite_n" type="string" required="false()"/>
+      <bind nodeset="/aTUogkKQGXyf3948YuyEPe/grp_traj_pro/A_activite/E_activite_n/A_Status_Emploi2" required="false()"/>
+      <bind nodeset="/aTUogkKQGXyf3948YuyEPe/grp_traj_pro/A_activite/E_activite_n/A_Status_Emploi2/E_status_n" required="false()"/>
+      <bind nodeset="/aTUogkKQGXyf3948YuyEPe/grp_traj_pro/A_activite/E_activite_n/A_Status_Emploi2/E_status_n/V_status_n" type="string" required="true()"/>
+      <bind nodeset="/aTUogkKQGXyf3948YuyEPe/grp_traj_pro/A_activite/E_activite_n/A_type_emploi2" required="false()"/>
+      <bind nodeset="/aTUogkKQGXyf3948YuyEPe/grp_traj_pro/A_activite/E_activite_n/A_type_emploi2/E_type_n" required="false()"/>
+      <bind nodeset="/aTUogkKQGXyf3948YuyEPe/grp_traj_pro/A_activite/E_activite_n/A_type_emploi2/E_type_n/V_type_emploi_n" type="string" required="true()"/>
+      <bind nodeset="/aTUogkKQGXyf3948YuyEPe/grp_traj_pro/A_activite/E_activite_n/A_activite_entreprise2" required="false()"/>
+      <bind nodeset="/aTUogkKQGXyf3948YuyEPe/grp_traj_pro/A_activite/E_activite_n/A_activite_entreprise2/E_Activite_entreprise_n" required="false()"/>
+      <bind nodeset="/aTUogkKQGXyf3948YuyEPe/grp_traj_pro/A_activite/E_activite_n/A_activite_entreprise2/E_Activite_entreprise_n/V_activite_entreprise_n" type="string" required="true()"/>
+      <bind nodeset="/aTUogkKQGXyf3948YuyEPe/grp_traj_pro/A_activite/E_activite_n/group_sc3ki23_001" required="false()"/>
+      <bind nodeset="/aTUogkKQGXyf3948YuyEPe/grp_traj_pro/A_activite/E_activite_n/group_sc3ki23_001/job_en_cours_n" type="string" required="true()"/>
+      <bind nodeset="/aTUogkKQGXyf3948YuyEPe/grp_traj_pro/A_activite/E_activite_n/Quand_avez_vous_term_e_premi_re_activit__001" type="date" relevant=" ../group_sc3ki23_001/job_en_cours_n  = 'no'" required="false()"/>
+      <bind nodeset="/aTUogkKQGXyf3948YuyEPe/grp_traj_pro/A_activite/group_pw35g06" required="false()"/>
+      <bind nodeset="/aTUogkKQGXyf3948YuyEPe/grp_traj_pro/A_activite/group_pw35g06/Pouvez_vous_me_pr_ci_ssait_de_p_riodes_de" type="string" required="false()"/>
+      <bind nodeset="/aTUogkKQGXyf3948YuyEPe/grp_famille" required="false()"/>
+      <bind nodeset="/aTUogkKQGXyf3948YuyEPe/grp_famille/intro_parents" readonly="true()" type="string" required="false()"/>
+      <bind nodeset="/aTUogkKQGXyf3948YuyEPe/grp_famille/grp_pere" required="false()"/>
+      <bind nodeset="/aTUogkKQGXyf3948YuyEPe/grp_famille/grp_pere/pere_vivant" type="string" required="true()"/>
+      <bind nodeset="/aTUogkKQGXyf3948YuyEPe/grp_famille/grp_pere/pere_deces" type="int" relevant=" /aTUogkKQGXyf3948YuyEPe/grp_famille/grp_pere/pere_vivant  = 'non'" required="true()" constraint="(. &gt;=  /aTUogkKQGXyf3948YuyEPe/debut_enquete/annee_naissance  and . &lt;= 2026) or . = 9999" jr:constraintMsg="L'année doit être valide ou 9999"/>
+      <bind nodeset="/aTUogkKQGXyf3948YuyEPe/grp_famille/grp_pere/age_pere_deces" type="string" required="false()" calculate="if( /aTUogkKQGXyf3948YuyEPe/grp_famille/grp_pere/pere_deces  != 9999,  /aTUogkKQGXyf3948YuyEPe/grp_famille/grp_pere/pere_deces  -  /aTUogkKQGXyf3948YuyEPe/debut_enquete/annee_naissance , 9999)"/>
+      <bind nodeset="/aTUogkKQGXyf3948YuyEPe/grp_famille/grp_pere/note_age_pere" readonly="true()" type="string" relevant=" /aTUogkKQGXyf3948YuyEPe/grp_famille/grp_pere/pere_vivant  = 'non' and  /aTUogkKQGXyf3948YuyEPe/grp_famille/grp_pere/pere_deces  != 9999" required="false()"/>
+      <bind nodeset="/aTUogkKQGXyf3948YuyEPe/grp_famille/grp_cohab_pere" required="true()"/>
+      <bind nodeset="/aTUogkKQGXyf3948YuyEPe/grp_famille/grp_cohab_pere/debut_cohab_pere" type="int" required="true()"/>
+      <bind nodeset="/aTUogkKQGXyf3948YuyEPe/grp_famille/grp_cohab_pere/age_debut_cohab_pere" type="string" required="false()" calculate="if( /aTUogkKQGXyf3948YuyEPe/grp_famille/grp_cohab_pere/debut_cohab_pere  != 9999,  /aTUogkKQGXyf3948YuyEPe/grp_famille/grp_cohab_pere/debut_cohab_pere  -  /aTUogkKQGXyf3948YuyEPe/debut_enquete/annee_naissance , 9999)"/>
+      <bind nodeset="/aTUogkKQGXyf3948YuyEPe/grp_famille/grp_cohab_pere/fin_cohab_pere" type="int" required="true()"/>
+      <bind nodeset="/aTUogkKQGXyf3948YuyEPe/grp_famille/grp_cohab_pere/age_fin_cohab_pere" type="string" required="false()" calculate="if( /aTUogkKQGXyf3948YuyEPe/grp_famille/grp_cohab_pere/fin_cohab_pere  != 9999,  /aTUogkKQGXyf3948YuyEPe/grp_famille/grp_cohab_pere/fin_cohab_pere  -  /aTUogkKQGXyf3948YuyEPe/debut_enquete/annee_naissance , 9999)"/>
+      <bind nodeset="/aTUogkKQGXyf3948YuyEPe/grp_famille/grp_cohab_pere/note_cohab_pere" readonly="true()" type="string" relevant=" /aTUogkKQGXyf3948YuyEPe/grp_famille/grp_cohab_pere/debut_cohab_pere  != 9999 and  /aTUogkKQGXyf3948YuyEPe/grp_famille/grp_cohab_pere/fin_cohab_pere  != 9999" required="false()"/>
+      <bind nodeset="/aTUogkKQGXyf3948YuyEPe/grp_famille/grp_mere" required="false()"/>
+      <bind nodeset="/aTUogkKQGXyf3948YuyEPe/grp_famille/grp_mere/mere_vivante" type="string" required="true()"/>
+      <bind nodeset="/aTUogkKQGXyf3948YuyEPe/grp_famille/grp_mere/mere_deces" type="int" relevant=" /aTUogkKQGXyf3948YuyEPe/grp_famille/grp_mere/mere_vivante  = 'non'" required="true()" constraint="(. &gt;=  /aTUogkKQGXyf3948YuyEPe/debut_enquete/annee_naissance  and . &lt;= 2026) or . = 9999" jr:constraintMsg="L'année doit être valide ou 9999"/>
+      <bind nodeset="/aTUogkKQGXyf3948YuyEPe/grp_famille/grp_mere/age_mere_deces" type="string" required="false()" calculate="if( /aTUogkKQGXyf3948YuyEPe/grp_famille/grp_mere/mere_deces  != 9999,  /aTUogkKQGXyf3948YuyEPe/grp_famille/grp_mere/mere_deces  -  /aTUogkKQGXyf3948YuyEPe/debut_enquete/annee_naissance , 9999)"/>
+      <bind nodeset="/aTUogkKQGXyf3948YuyEPe/grp_famille/grp_mere/note_age_mere" readonly="true()" type="string" relevant=" /aTUogkKQGXyf3948YuyEPe/grp_famille/grp_mere/mere_vivante  = 'non' and  /aTUogkKQGXyf3948YuyEPe/grp_famille/grp_mere/mere_deces  != 9999" required="false()"/>
+      <bind nodeset="/aTUogkKQGXyf3948YuyEPe/grp_famille/grp_cohab_mere" required="true()"/>
+      <bind nodeset="/aTUogkKQGXyf3948YuyEPe/grp_famille/grp_cohab_mere/debut_cohab_mere" type="int" required="true()" constraint="(. &gt;=  /aTUogkKQGXyf3948YuyEPe/debut_enquete/annee_naissance  and . &lt;= 2026) or . = 9999" jr:constraintMsg="L'année doit être valide (&gt;= année de naissance) ou 9999"/>
+      <bind nodeset="/aTUogkKQGXyf3948YuyEPe/grp_famille/grp_cohab_mere/age_debut_cohab_mere" type="string" required="false()" calculate="if( /aTUogkKQGXyf3948YuyEPe/grp_famille/grp_cohab_mere/debut_cohab_mere  != 9999,  /aTUogkKQGXyf3948YuyEPe/grp_famille/grp_cohab_mere/debut_cohab_mere  -  /aTUogkKQGXyf3948YuyEPe/debut_enquete/annee_naissance , 9999)"/>
+      <bind nodeset="/aTUogkKQGXyf3948YuyEPe/grp_famille/grp_cohab_mere/fin_cohab_mere" type="int" required="true()" constraint="(. = 9999) or (. &lt;= 2026 and . &gt;=  /aTUogkKQGXyf3948YuyEPe/debut_enquete/annee_naissance  and (. &gt;=  /aTUogkKQGXyf3948YuyEPe/grp_famille/grp_cohab_mere/debut_cohab_mere  or  /aTUogkKQGXyf3948YuyEPe/grp_famille/grp_cohab_mere/debut_cohab_mere  = 9999))" jr:constraintMsg="La date de fin doit être après le début ou 9999"/>
+      <bind nodeset="/aTUogkKQGXyf3948YuyEPe/grp_famille/grp_cohab_mere/age_fin_cohab_mere" type="string" required="false()" calculate="if( /aTUogkKQGXyf3948YuyEPe/grp_famille/grp_cohab_mere/fin_cohab_mere  != 9999,  /aTUogkKQGXyf3948YuyEPe/grp_famille/grp_cohab_mere/fin_cohab_mere  -  /aTUogkKQGXyf3948YuyEPe/debut_enquete/annee_naissance , 9999)"/>
+      <bind nodeset="/aTUogkKQGXyf3948YuyEPe/grp_famille/grp_cohab_mere/note_cohab_mere" readonly="true()" type="string" relevant=" /aTUogkKQGXyf3948YuyEPe/grp_famille/grp_cohab_mere/debut_cohab_mere  != 9999 and  /aTUogkKQGXyf3948YuyEPe/grp_famille/grp_cohab_mere/fin_cohab_mere  != 9999" required="false()"/>
+      <bind nodeset="/aTUogkKQGXyf3948YuyEPe/grp_famille/grp_foyer_fratrie" required="false()"/>
+      <bind nodeset="/aTUogkKQGXyf3948YuyEPe/grp_famille/grp_foyer_fratrie/depart_foyer" type="int" required="true()"/>
+      <bind nodeset="/aTUogkKQGXyf3948YuyEPe/grp_famille/grp_foyer_fratrie/freres_soeurs" type="int" required="true()"/>
+      <bind nodeset="/aTUogkKQGXyf3948YuyEPe/grp_famille/intro_matrimoniale" readonly="true()" type="string" required="false()"/>
+      <bind nodeset="/aTUogkKQGXyf3948YuyEPe/grp_famille/grp_couple_global" required="false()"/>
+      <bind nodeset="/aTUogkKQGXyf3948YuyEPe/grp_famille/grp_couple_global/couple_actuel" type="string" required="true()"/>
+      <bind nodeset="/aTUogkKQGXyf3948YuyEPe/grp_famille/grp_couple_global/couple_passe" type="string" relevant=" /aTUogkKQGXyf3948YuyEPe/grp_famille/grp_couple_global/couple_actuel  = 'non'" required="true()"/>
+      <bind nodeset="/aTUogkKQGXyf3948YuyEPe/grp_famille/grp_couple_global/a_vecu_couple" type="string" required="true()" calculate="if( /aTUogkKQGXyf3948YuyEPe/grp_famille/grp_couple_global/couple_actuel ='oui' or  /aTUogkKQGXyf3948YuyEPe/grp_famille/grp_couple_global/couple_passe ='oui', 'oui', 'non')"/>
+      <bind nodeset="/aTUogkKQGXyf3948YuyEPe/grp_famille/nb_conjoints" type="int" relevant=" /aTUogkKQGXyf3948YuyEPe/grp_famille/grp_couple_global/a_vecu_couple  = 'oui'" required="true()"/>
+      <bind nodeset="/aTUogkKQGXyf3948YuyEPe/grp_famille/rep_conjoints" relevant=" /aTUogkKQGXyf3948YuyEPe/grp_famille/grp_couple_global/a_vecu_couple  = 'oui'" required="true()"/>
+      <bind nodeset="/aTUogkKQGXyf3948YuyEPe/grp_famille/rep_conjoints/grp_conjoint_id" required="false()"/>
+      <bind nodeset="/aTUogkKQGXyf3948YuyEPe/grp_famille/rep_conjoints/grp_conjoint_id/prenom_conjoint" type="string" required="true()"/>
+      <bind nodeset="/aTUogkKQGXyf3948YuyEPe/grp_famille/rep_conjoints/grp_conjoint_id/annee_naissance_conj" type="int" required="true()" constraint=". = 9999" jr:constraintMsg="L'année doit être valide ou 9999"/>
+      <bind nodeset="/aTUogkKQGXyf3948YuyEPe/grp_famille/rep_conjoints/intro_couple" readonly="true()" type="string" required="false()"/>
+      <bind nodeset="/aTUogkKQGXyf3948YuyEPe/grp_famille/rep_conjoints/grp_dates_union" required="false()"/>
+      <bind nodeset="/aTUogkKQGXyf3948YuyEPe/grp_famille/rep_conjoints/grp_dates_union/conj_debut_union" type="int" required="true()" constraint="(. &gt;= ( /aTUogkKQGXyf3948YuyEPe/debut_enquete/annee_naissance  + 14) and . &lt;= 2026) or . = 9999" jr:constraintMsg="L'année doit être valide ou 9999"/>
+      <bind nodeset="/aTUogkKQGXyf3948YuyEPe/grp_famille/rep_conjoints/grp_dates_union/age_debut_union" type="string" required="false()" calculate="if( ../conj_debut_union  != 9999,  ../conj_debut_union  -  /aTUogkKQGXyf3948YuyEPe/debut_enquete/annee_naissance , 9999)"/>
+      <bind nodeset="/aTUogkKQGXyf3948YuyEPe/grp_famille/rep_conjoints/grp_dates_union/conj_union_libre" type="string" required="true()"/>
+      <bind nodeset="/aTUogkKQGXyf3948YuyEPe/grp_famille/rep_conjoints/grp_dates_union/conj_marie" type="string" required="true()"/>
+      <bind nodeset="/aTUogkKQGXyf3948YuyEPe/grp_famille/rep_conjoints/grp_dates_union/conj_tjrs_ensemble" type="string" required="true()"/>
+      <bind nodeset="/aTUogkKQGXyf3948YuyEPe/grp_famille/rep_conjoints/grp_dates_union/conj_fin_union" type="int" relevant=" ../conj_tjrs_ensemble  = 'non'" required="true()" constraint="(. = 9999) or (. &lt;= 2026 and (. &gt;=  ../conj_debut_union  or  ../conj_debut_union  = 9999))" jr:constraintMsg="La date de fin doit être après le début ou 9999"/>
+      <bind nodeset="/aTUogkKQGXyf3948YuyEPe/grp_famille/rep_conjoints/grp_dates_union/conj_rupture_type" type="string" relevant=" ../conj_tjrs_ensemble  = 'non'" required="true()"/>
+      <bind nodeset="/aTUogkKQGXyf3948YuyEPe/grp_famille/rep_conjoints/grp_dates_union/note_age_union" readonly="true()" type="string" relevant=" ../conj_debut_union  != 9999" required="false()"/>
+      <bind nodeset="/aTUogkKQGXyf3948YuyEPe/grp_famille/rep_conjoints/rep_cohab_conj" required="true()"/>
+      <bind nodeset="/aTUogkKQGXyf3948YuyEPe/grp_famille/rep_conjoints/rep_cohab_conj/debut_cohab_conj" type="int" required="true()" constraint="(. &gt;= ( /aTUogkKQGXyf3948YuyEPe/debut_enquete/annee_naissance  + 14) and . &lt;= 2026) or . = 9999" jr:constraintMsg="L'année doit être valide (&gt;= année de naissance + 14) ou 9999"/>
+      <bind nodeset="/aTUogkKQGXyf3948YuyEPe/grp_famille/rep_conjoints/rep_cohab_conj/fin_cohab_conj" type="int" required="true()" constraint="(. = 9999) or (. &lt;= 2026 and . &gt;= ( /aTUogkKQGXyf3948YuyEPe/debut_enquete/annee_naissance  + 14) and (. &gt;=  ../debut_cohab_conj  or  ../debut_cohab_conj  = 9999))" jr:constraintMsg="La date de fin doit être après le début ou 9999"/>
+      <bind nodeset="/aTUogkKQGXyf3948YuyEPe/grp_famille/intro_enfant" readonly="true()" type="string" required="false()"/>
+      <bind nodeset="/aTUogkKQGXyf3948YuyEPe/grp_famille/a_enfants" type="string" required="true()"/>
+      <bind nodeset="/aTUogkKQGXyf3948YuyEPe/grp_famille/nb_enfants" type="int" relevant=" /aTUogkKQGXyf3948YuyEPe/grp_famille/a_enfants  = 'oui'" required="true()"/>
+      <bind nodeset="/aTUogkKQGXyf3948YuyEPe/grp_famille/rep_enfants" relevant=" /aTUogkKQGXyf3948YuyEPe/grp_famille/a_enfants  = 'oui'" required="true()"/>
+      <bind nodeset="/aTUogkKQGXyf3948YuyEPe/grp_famille/rep_enfants/grp_enfant_attr" required="false()"/>
+      <bind nodeset="/aTUogkKQGXyf3948YuyEPe/grp_famille/rep_enfants/grp_enfant_attr/prenom_enfant" type="string" required="true()"/>
+      <bind nodeset="/aTUogkKQGXyf3948YuyEPe/grp_famille/rep_enfants/grp_enfant_attr/annee_naissance_enf" type="int" required="true()" constraint="(. &gt;= ( /aTUogkKQGXyf3948YuyEPe/debut_enquete/annee_naissance  + 14) and . &lt;= 2026) or . = 9999" jr:constraintMsg="L'année doit être valide ou 9999"/>
+      <bind nodeset="/aTUogkKQGXyf3948YuyEPe/grp_famille/rep_enfants/grp_enfant_attr/age_naissance_enfant" type="string" required="false()" calculate="if( ../annee_naissance_enf  != 9999,  ../annee_naissance_enf  -  /aTUogkKQGXyf3948YuyEPe/debut_enquete/annee_naissance , 9999)"/>
+      <bind nodeset="/aTUogkKQGXyf3948YuyEPe/grp_famille/rep_enfants/grp_enfant_attr/sexe_enfant" type="string" required="true()"/>
+      <bind nodeset="/aTUogkKQGXyf3948YuyEPe/grp_famille/rep_enfants/grp_enfant_attr/deces_enfant" type="int" required="true()" constraint="(. &gt;=  ../annee_naissance_enf  and . &lt;= 2026) or . = 9999" jr:constraintMsg="L'année doit être après la naissance de l'enfant"/>
+      <bind nodeset="/aTUogkKQGXyf3948YuyEPe/grp_famille/rep_enfants/grp_enfant_attr/note_age_naissance" readonly="true()" type="string" relevant=" ../annee_naissance_enf  != 9999" required="false()"/>
+      <bind nodeset="/aTUogkKQGXyf3948YuyEPe/grp_famille/rep_enfants/group_wg4xu13" required="true()"/>
+      <bind nodeset="/aTUogkKQGXyf3948YuyEPe/grp_famille/rep_enfants/group_wg4xu13/Ann_e_de_d_but" type="int" required="true()" constraint="(. &gt;=  ../../grp_enfant_attr/annee_naissance_enf  and . &lt;= 2026) or . = 9999" jr:constraintMsg="L'année doit être valide (&gt;= année de naissance de l'enfant) ou 9999"/>
+      <bind nodeset="/aTUogkKQGXyf3948YuyEPe/grp_famille/rep_enfants/group_wg4xu13/Ann_e_de_fin" type="int" required="true()" constraint="(. = 9999) or (. &lt;= 2026 and . &gt;=  ../../grp_enfant_attr/annee_naissance_enf  and (. &gt;=  ../Ann_e_de_d_but  or  ../Ann_e_de_d_but  = 9999))" jr:constraintMsg="La date de fin doit être après le début ou 9999"/>
+      <bind nodeset="/aTUogkKQGXyf3948YuyEPe/meta/instanceID" type="string" readonly="true()" jr:preload="uid"/>
+    </model>
+  </h:head>
+  <h:body>
+    <group ref="/aTUogkKQGXyf3948YuyEPe/debut_enquete">
+      <label>I. Début de l'enquête</label>
+      <input ref="/aTUogkKQGXyf3948YuyEPe/debut_enquete/intro_enquete">
+        <label>Bienvenue dans cette enquête biographique LifeStory.</label>
+      </input>
+      <input ref="/aTUogkKQGXyf3948YuyEPe/debut_enquete/annee_naissance">
+        <label>En quelle année êtes-vous né(e) ?</label>
+      </input>
+    </group>
+    <group ref="/aTUogkKQGXyf3948YuyEPe/grp_traj_residentielle">
+      <label>II. Trajectoire résidentielle</label>
+      <group ref="/aTUogkKQGXyf3948YuyEPe/grp_traj_residentielle/A_commune">
+        <label>A_Commune</label>
+        <group ref="/aTUogkKQGXyf3948YuyEPe/grp_traj_residentielle/A_commune/introduction_commune">
+          <label>Introduction Commune</label>
+          <input ref="/aTUogkKQGXyf3948YuyEPe/grp_traj_residentielle/A_commune/introduction_commune/intro_commune">
+            <label>Pour commencer, nous allons décrire ensemble les différentes communes pendant lesquelles vous avez vécu au moins un an depuis votre naissance.</label>
+            <hint>Il est parfois possible d'habiter de façon habituelle dans deux lieux de résidences en même temps (commune, logement). N'oubliez pas de les mentionner dans la liste des communes où vous avez habité.</hint>
+          </input>
+        </group>
+        <group appearance="field-list" ref="/aTUogkKQGXyf3948YuyEPe/grp_traj_residentielle/A_commune/E_commune_1">
+          <label>E_commune_1</label>
+          <input ref="/aTUogkKQGXyf3948YuyEPe/grp_traj_residentielle/A_commune/E_commune_1/Q_commune_1">
+            <label>Où habitaient vos parents à votre naissance ?</label>
+          </input>
+          <select1 appearance="minimal autocomplete" ref="/aTUogkKQGXyf3948YuyEPe/grp_traj_residentielle/A_commune/E_commune_1/D_pays_c1">
+            <label>Pays</label>
+            <itemset nodeset="instance('countries')/root/item">
+              <value ref="id"/>
+              <label ref="name"/>
+            </itemset>
+          </select1>
+          <input ref="/aTUogkKQGXyf3948YuyEPe/grp_traj_residentielle/A_commune/E_commune_1/V_commune_1">
+            <label>Commune :</label>
+            <setvalue ref="/aTUogkKQGXyf3948YuyEPe/grp_traj_residentielle/A_commune/E_commune_n/V_commune_n" event="xforms-value-changed" value="if(position(..)=1,  /aTUogkKQGXyf3948YuyEPe/grp_traj_residentielle/A_commune/E_commune_1/V_commune_1 , &quot;&quot; )"/>
+          </input>
+          <input ref="/aTUogkKQGXyf3948YuyEPe/grp_traj_residentielle/A_commune/E_commune_1/D_dept_c1">
+            <label>Département :</label>
+            <setvalue ref="/aTUogkKQGXyf3948YuyEPe/grp_traj_residentielle/A_commune/E_commune_n/D_dept_cn" event="xforms-value-changed" value="if(position(..)=1,  /aTUogkKQGXyf3948YuyEPe/grp_traj_residentielle/A_commune/E_commune_1/D_dept_c1 , &quot;&quot; )"/>
+          </input>
+        </group>
+        <group ref="/aTUogkKQGXyf3948YuyEPe/grp_traj_residentielle/A_commune/filtre_commune">
+          <label>Filtre</label>
+          <select1 ref="/aTUogkKQGXyf3948YuyEPe/grp_traj_residentielle/A_commune/filtre_commune/toujours_vecu_commune">
+            <label> Avez-vous toujours vécu à <output value=" /aTUogkKQGXyf3948YuyEPe/grp_traj_residentielle/A_commune/E_commune_1/V_commune_1 "/> ? </label>
+            <itemset nodeset="instance('oui_non')/root/item">
+              <value ref="name"/>
+              <label ref="label"/>
+            </itemset>
+          </select1>
+        </group>
+        <group ref="/aTUogkKQGXyf3948YuyEPe/grp_traj_residentielle/A_commune/E_commune_n">
+          <label>E_Commune_n</label>
+          <repeat nodeset="/aTUogkKQGXyf3948YuyEPe/grp_traj_residentielle/A_commune/E_commune_n" appearance="field-list">
+            <input ref="/aTUogkKQGXyf3948YuyEPe/grp_traj_residentielle/A_commune/E_commune_n/Q_commune_n">
+              <label>Pouvez-vous citer les différentes communes (départements/pays) dans lesquelles vous avez vécu après la première commune pendant au moins un an et à quel âge ou en quelle année vous êtes arrivé·e dans ces communes?</label>
+            </input>
+            <select1 appearance="minimal autocomplete" ref="/aTUogkKQGXyf3948YuyEPe/grp_traj_residentielle/A_commune/E_commune_n/D_pays_cn">
+              <label>Pays</label>
+              <itemset nodeset="instance('countries')/root/item">
+                <value ref="id"/>
+                <label ref="name"/>
+              </itemset>
+            </select1>
+            <input ref="/aTUogkKQGXyf3948YuyEPe/grp_traj_residentielle/A_commune/E_commune_n/V_commune_n">
+              <label>Commune :</label>
+            </input>
+            <input ref="/aTUogkKQGXyf3948YuyEPe/grp_traj_residentielle/A_commune/E_commune_n/D_dept_cn">
+              <label>Département :</label>
+            </input>
+            <input ref="/aTUogkKQGXyf3948YuyEPe/grp_traj_residentielle/A_commune/E_commune_n/SD_cn">
+              <label>Saisissez l'Année (ex: 2015) OU l'Âge (ex: 25) d'arrivée :</label>
+              <hint>Laissez vide si vous préférez saisir l'âge. Saisissez 9999 si vous avez oublié</hint>
+            </input>
+            <input ref="/aTUogkKQGXyf3948YuyEPe/grp_traj_residentielle/A_commune/E_commune_n/note_arrivee_commune">
+              <label> Enregistré : Année <output value=" ../annee_arrivee_commune "/> (À <output value=" ../age_arrivee_commune "/> ans) </label>
+            </input>
+            <select1 ref="/aTUogkKQGXyf3948YuyEPe/grp_traj_residentielle/A_commune/E_commune_n/multi_residence">
+              <label>Est-ce une multi-résidence ?</label>
+              <itemset nodeset="instance('oui_non')/root/item">
+                <value ref="name"/>
+                <label ref="label"/>
+              </itemset>
+            </select1>
+            <setvalue ref="/aTUogkKQGXyf3948YuyEPe/grp_traj_residentielle/A_commune/E_commune_n/D_pays_cn" value=" /aTUogkKQGXyf3948YuyEPe/grp_traj_residentielle/A_commune/E_commune_1/D_pays_c1 " event="odk-instance-first-load odk-new-repeat"/>
+          </repeat>
+        </group>
+      </group>
+      <group ref="/aTUogkKQGXyf3948YuyEPe/grp_traj_residentielle/A_logement">
+        <label>A_Logement</label>
+        <group ref="/aTUogkKQGXyf3948YuyEPe/grp_traj_residentielle/A_logement/introduction_logement">
+          <label>Introduction Logement</label>
+          <input ref="/aTUogkKQGXyf3948YuyEPe/grp_traj_residentielle/A_logement/introduction_logement/intro_logement">
+            <label>Nous allons maintenant faire la liste des logements dans lesquels vous avez vécu dans chaque commune.</label>
+          </input>
+        </group>
+        <group ref="/aTUogkKQGXyf3948YuyEPe/grp_traj_residentielle/A_logement/repeat_logements_global">
+          <label>Logements par communes</label>
+          <repeat nodeset="/aTUogkKQGXyf3948YuyEPe/grp_traj_residentielle/A_logement/repeat_logements_global" jr:count=" /aTUogkKQGXyf3948YuyEPe/grp_traj_residentielle/A_logement/repeat_logements_global_count ">
+            <group ref="/aTUogkKQGXyf3948YuyEPe/grp_traj_residentielle/A_logement/repeat_logements_global/group_ws7ip90">
+              <label> Logements [<output value=" ../display_name "/> - <output value=" ../display_year "/>] </label>
+              <group ref="/aTUogkKQGXyf3948YuyEPe/grp_traj_residentielle/A_logement/repeat_logements_global/group_ws7ip90/group_pd2yp93">
+                <label>Filtre</label>
+                <select1 ref="/aTUogkKQGXyf3948YuyEPe/grp_traj_residentielle/A_logement/repeat_logements_global/group_ws7ip90/group_pd2yp93/a_display_name_di_ns_le_m_me_l">
+                  <label> A <output value=" ../../../display_name "/> (<output value=" ../../../display_year "/>), avez-vous toujours vécu dans le même logement ? </label>
+                  <itemset nodeset="instance('ud12t21')/root/item">
+                    <value ref="name"/>
+                    <label ref="label"/>
+                  </itemset>
+                </select1>
+              </group>
+              <group ref="/aTUogkKQGXyf3948YuyEPe/grp_traj_residentielle/A_logement/repeat_logements_global/group_ws7ip90/E_logement_n">
+                <label>E_Logement_n</label>
+                <repeat nodeset="/aTUogkKQGXyf3948YuyEPe/grp_traj_residentielle/A_logement/repeat_logements_global/group_ws7ip90/E_logement_n">
+                  <group ref="/aTUogkKQGXyf3948YuyEPe/grp_traj_residentielle/A_logement/repeat_logements_global/group_ws7ip90/E_logement_n/group_jr34s08">
+                    <label>Type_logement</label>
+                    <input ref="/aTUogkKQGXyf3948YuyEPe/grp_traj_residentielle/A_logement/repeat_logements_global/group_ws7ip90/E_logement_n/group_jr34s08/Q_logement_n">
+                      <label> Pour chaque logement à <output value=" ../../../../display_name "/> <output value=" ../../../../display_year "/>, pouvez-vous nous dire en quelle année vous avez emménagé ? Dans quel type de logement ? </label>
+                    </input>
+                    <select1 appearance="minimal" ref="/aTUogkKQGXyf3948YuyEPe/grp_traj_residentielle/A_logement/repeat_logements_global/group_ws7ip90/E_logement_n/group_jr34s08/ST_logement_n">
+                      <label>Type de logement</label>
+                      <itemset nodeset="instance('bn7yc59')/root/item">
+                        <value ref="name"/>
+                        <label ref="label"/>
+                      </itemset>
+                    </select1>
+                    <input ref="/aTUogkKQGXyf3948YuyEPe/grp_traj_residentielle/A_logement/repeat_logements_global/group_ws7ip90/E_logement_n/group_jr34s08/SD_ln">
+                      <label>Saisissez l'Année OU l'Âge d'emménagement :</label>
+                      <hint>Laissez vide si vous préférez saisir l'âge. Saisissez 9999 si vous avez oublié</hint>
+                    </input>
+                    <input ref="/aTUogkKQGXyf3948YuyEPe/grp_traj_residentielle/A_logement/repeat_logements_global/group_ws7ip90/E_logement_n/group_jr34s08/note_arrivee_logement">
+                      <label> Enregistré : Année <output value=" ../annee_arrivee_logement "/> (À <output value=" ../age_arrivee_logement "/> ans). </label>
+                    </input>
+                    <input ref="/aTUogkKQGXyf3948YuyEPe/grp_traj_residentielle/A_logement/repeat_logements_global/group_ws7ip90/E_logement_n/group_jr34s08/ED_ln">
+                      <label>Saisissez l'Année OU l'Âge de départ :</label>
+                      <hint>Laissez vide si vous préférez saisir l'âge. Saisissez 9999 si vous avez oublié</hint>
+                    </input>
+                    <input ref="/aTUogkKQGXyf3948YuyEPe/grp_traj_residentielle/A_logement/repeat_logements_global/group_ws7ip90/E_logement_n/group_jr34s08/note_depart_logement">
+                      <label> Enregistré : Année <output value=" ../annee_depart_logement "/> (À <output value=" ../age_depart_logement "/> ans). </label>
+                    </input>
+                  </group>
+                  <group ref="/aTUogkKQGXyf3948YuyEPe/grp_traj_residentielle/A_logement/repeat_logements_global/group_ws7ip90/E_logement_n/A_status_res">
+                    <label>A_Status</label>
+                    <group ref="/aTUogkKQGXyf3948YuyEPe/grp_traj_residentielle/A_logement/repeat_logements_global/group_ws7ip90/E_logement_n/A_status_res/E_status_res">
+                      <label>E_status_n</label>
+                      <input ref="/aTUogkKQGXyf3948YuyEPe/grp_traj_residentielle/A_logement/repeat_logements_global/group_ws7ip90/E_logement_n/A_status_res/E_status_res/Q_statut_res">
+                        <label>Quel était votre statut d'occupation à l'arrivée dans ce logement ? Et à votre départ de ce logement ou maintenant ?</label>
+                      </input>
+                      <select1 appearance="minimal" ref="/aTUogkKQGXyf3948YuyEPe/grp_traj_residentielle/A_logement/repeat_logements_global/group_ws7ip90/E_logement_n/A_status_res/E_status_res/V_statut_res1">
+                        <label>Statut à l'entrée</label>
+                        <itemset nodeset="instance('ro0ok06')/root/item">
+                          <value ref="name"/>
+                          <label ref="label"/>
+                        </itemset>
+                      </select1>
+                      <select1 appearance="minimal" ref="/aTUogkKQGXyf3948YuyEPe/grp_traj_residentielle/A_logement/repeat_logements_global/group_ws7ip90/E_logement_n/A_status_res/E_status_res/V_statut_res2">
+                        <label>Statut à la sortie</label>
+                        <itemset nodeset="instance('fl3db33')/root/item">
+                          <value ref="name"/>
+                          <label ref="label"/>
+                        </itemset>
+                      </select1>
+                    </group>
+                  </group>
+                </repeat>
+              </group>
+            </group>
+          </repeat>
+        </group>
+      </group>
+    </group>
+    <group ref="/aTUogkKQGXyf3948YuyEPe/grp_traj_scolaire">
+      <label>III. Trajectoire scolaire</label>
+      <group ref="/aTUogkKQGXyf3948YuyEPe/grp_traj_scolaire/group_mq8st48">
+        <label>Introduction Scolaire</label>
+        <input ref="/aTUogkKQGXyf3948YuyEPe/grp_traj_scolaire/group_mq8st48/Introduction_scolaire">
+          <label>Introduction_scolaire : Nous allons maintenant aborder votre parcours scolaire et les études que vous avez suivi. (période de scolarité ou hors scolarité supérieure ou égale à un an)</label>
+        </input>
+      </group>
+      <group ref="/aTUogkKQGXyf3948YuyEPe/grp_traj_scolaire/group_ao4nw75">
+        <label>Questions transversales</label>
+        <select1 appearance="minimal" ref="/aTUogkKQGXyf3948YuyEPe/grp_traj_scolaire/group_ao4nw75/Quel_est_le_dipl_me_ue_vous_ayez_obtenu_">
+          <label>Quel est le diplôme le plus élevé que vous ayez obtenu ?</label>
+          <itemset nodeset="instance('eg5vl41')/root/item">
+            <value ref="name"/>
+            <label ref="label"/>
+          </itemset>
+        </select1>
+        <input appearance="year" ref="/aTUogkKQGXyf3948YuyEPe/grp_traj_scolaire/group_ao4nw75/En_quelle_ann_e_avez_us_obtenu_ce_dip_me_">
+          <label>En quelle année avez-vous obtenu ce dipôme ?</label>
+        </input>
+      </group>
+      <group ref="/aTUogkKQGXyf3948YuyEPe/grp_traj_scolaire/A_Niveau_scolaire">
+        <label>A_Niveau_scolaire</label>
+        <group ref="/aTUogkKQGXyf3948YuyEPe/grp_traj_scolaire/A_Niveau_scolaire/E_niveau_scolaire_n">
+          <label>E_niveau_scolaire_n</label>
+          <repeat nodeset="/aTUogkKQGXyf3948YuyEPe/grp_traj_scolaire/A_Niveau_scolaire/E_niveau_scolaire_n">
+            <input ref="/aTUogkKQGXyf3948YuyEPe/grp_traj_scolaire/A_Niveau_scolaire/E_niveau_scolaire_n/Pouvez_vous_pr_ciser_pas_suivi_d_tudes_">
+              <label>Pouvez-vous préciser vos années de scolarité et d'études après le collège ? Qualifier ces périodes ? Précisez les années de début et de fin. N'oubliez pas de préciser les années durant lesquelles vous n'avez pas suivi d'études. :</label>
+            </input>
+            <select1 ref="/aTUogkKQGXyf3948YuyEPe/grp_traj_scolaire/A_Niveau_scolaire/E_niveau_scolaire_n/D_type_periode">
+              <label>Type de la période</label>
+              <itemset nodeset="instance('hl6zc56')/root/item">
+                <value ref="name"/>
+                <label ref="label"/>
+              </itemset>
+            </select1>
+            <select1 ref="/aTUogkKQGXyf3948YuyEPe/grp_traj_scolaire/A_Niveau_scolaire/E_niveau_scolaire_n/V_niveau_scolaire_1">
+              <label>Qualifier la période d'absence</label>
+              <itemset nodeset="instance('lh4jq98')/root/item">
+                <value ref="name"/>
+                <label ref="label"/>
+              </itemset>
+            </select1>
+            <input ref="/aTUogkKQGXyf3948YuyEPe/grp_traj_scolaire/A_Niveau_scolaire/E_niveau_scolaire_n/V_niveau_scolaire_2">
+              <label>Etablissement</label>
+            </input>
+            <input appearance="year" ref="/aTUogkKQGXyf3948YuyEPe/grp_traj_scolaire/A_Niveau_scolaire/E_niveau_scolaire_n/SD_scol">
+              <label>Année de début</label>
+            </input>
+            <input appearance="year" ref="/aTUogkKQGXyf3948YuyEPe/grp_traj_scolaire/A_Niveau_scolaire/E_niveau_scolaire_n/ED_scol">
+              <label>Année de fin</label>
+            </input>
+            <group ref="/aTUogkKQGXyf3948YuyEPe/grp_traj_scolaire/A_Niveau_scolaire/E_niveau_scolaire_n/A_type_etablissement">
+              <label>A_type_etablissement</label>
+              <group ref="/aTUogkKQGXyf3948YuyEPe/grp_traj_scolaire/A_Niveau_scolaire/E_niveau_scolaire_n/A_type_etablissement/E_type_etablissement">
+                <label>E_type_etablissement_n</label>
+                <select1 ref="/aTUogkKQGXyf3948YuyEPe/grp_traj_scolaire/A_Niveau_scolaire/E_niveau_scolaire_n/A_type_etablissement/E_type_etablissement/V_type_etablissement_n">
+                  <label>Pour cette période de scolarité était-ce dans un ou des établissements public ou privé ?</label>
+                  <itemset nodeset="instance('bx0os15')/root/item">
+                    <value ref="name"/>
+                    <label ref="label"/>
+                  </itemset>
+                </select1>
+              </group>
+            </group>
+          </repeat>
+        </group>
+      </group>
+      <select1 ref="/aTUogkKQGXyf3948YuyEPe/grp_traj_scolaire/Qu_avez_vous_fait_l_a_fin_de_vos_tudes_">
+        <label>Qu'avez-vous fait l'année qui a suivi la fin de vos études ?</label>
+        <itemset nodeset="instance('xr77s51')/root/item">
+          <value ref="name"/>
+          <label ref="label"/>
+        </itemset>
+      </select1>
+    </group>
+    <group ref="/aTUogkKQGXyf3948YuyEPe/grp_traj_pro">
+      <label>IV. Trajectoire professionnelle</label>
+      <input ref="/aTUogkKQGXyf3948YuyEPe/grp_traj_pro/intro_pro">
+        <label>Intro_pro: Nous allons maintenant évoquer les différentes périodes de votre vie professionnelle en parlant des emplois que vous avez eu pendant au moins un an et des périodes où vous n'avez pas eu d'emploi. (Il est parfois possible d'exercer plusieurs activités professionnelles en même temps. N'oubliez pas de les mentionner dans la liste des activités professionnelles que vous avez exercées).</label>
+      </input>
+      <group appearance="field-list" ref="/aTUogkKQGXyf3948YuyEPe/grp_traj_pro/grp_act_pro">
+        <label>Questions transversales</label>
+        <select1 ref="/aTUogkKQGXyf3948YuyEPe/grp_traj_pro/grp_act_pro/act_pro_actuelle">
+          <label>Exercez-vous actuellement une activité professionnelle ?</label>
+          <itemset nodeset="instance('yes_no')/root/item">
+            <value ref="name"/>
+            <label ref="label"/>
+          </itemset>
+        </select1>
+        <input ref="/aTUogkKQGXyf3948YuyEPe/grp_traj_pro/grp_act_pro/metier_actuel">
+          <label>Quelle activité professionnelle exercez-vous (métier) ?</label>
+        </input>
+        <select1 ref="/aTUogkKQGXyf3948YuyEPe/grp_traj_pro/grp_act_pro/statut_actuel">
+          <label>Quel statut avez-vous ?</label>
+          <itemset nodeset="instance('statut_pro')/root/item">
+            <value ref="name"/>
+            <label ref="label"/>
+          </itemset>
+        </select1>
+        <select1 ref="/aTUogkKQGXyf3948YuyEPe/grp_traj_pro/grp_act_pro/type_emploi_actuel">
+          <label>Quel est le type de votre emploi ?</label>
+          <itemset nodeset="instance('type_emploi')/root/item">
+            <value ref="name"/>
+            <label ref="label"/>
+          </itemset>
+        </select1>
+        <input ref="/aTUogkKQGXyf3948YuyEPe/grp_traj_pro/grp_act_pro/activite_etab_actuel">
+          <label>Quelle est l'activité de l'établissement qui vous emploie ?</label>
+        </input>
+        <select1 ref="/aTUogkKQGXyf3948YuyEPe/grp_traj_pro/grp_act_pro/situation_actuelle">
+          <label>Quelle est votre situation actuellement ?</label>
+          <itemset nodeset="instance('situation_act')/root/item">
+            <value ref="name"/>
+            <label ref="label"/>
+          </itemset>
+        </select1>
+        <select1 ref="/aTUogkKQGXyf3948YuyEPe/grp_traj_pro/grp_act_pro/deja_travaille">
+          <label>Avez-vous déjà exercé une activité professionnelle ?</label>
+          <itemset nodeset="instance('yes_no')/root/item">
+            <value ref="name"/>
+            <label ref="label"/>
+          </itemset>
+        </select1>
+      </group>
+      <group ref="/aTUogkKQGXyf3948YuyEPe/grp_traj_pro/A_activite">
+        <label>A_Activité</label>
+        <group ref="/aTUogkKQGXyf3948YuyEPe/grp_traj_pro/A_activite/E_activite_1">
+          <label>E_Activité_1</label>
+          <input ref="/aTUogkKQGXyf3948YuyEPe/grp_traj_pro/A_activite/E_activite_1/SD_activite_1">
+            <label>Quand avez-vous obtenu votre premier emploi d'une durée supérieure ou égale à un an ?</label>
+          </input>
+          <input ref="/aTUogkKQGXyf3948YuyEPe/grp_traj_pro/A_activite/E_activite_1/V_activite_1">
+            <label>Quelle activitié professionnelle exerciez-vous (métier) ?</label>
+          </input>
+        </group>
+        <group ref="/aTUogkKQGXyf3948YuyEPe/grp_traj_pro/A_activite/A_Status_Emploi">
+          <label>A_Status_Emploi</label>
+          <group ref="/aTUogkKQGXyf3948YuyEPe/grp_traj_pro/A_activite/A_Status_Emploi/E_status_1">
+            <label>E_Status_1</label>
+            <select1 ref="/aTUogkKQGXyf3948YuyEPe/grp_traj_pro/A_activite/A_Status_Emploi/E_status_1/V_status_emploi_1">
+              <label>Quel statut aviez-vous ?</label>
+              <itemset nodeset="instance('statut_pro')/root/item">
+                <value ref="name"/>
+                <label ref="label"/>
+              </itemset>
+            </select1>
+          </group>
+        </group>
+        <group ref="/aTUogkKQGXyf3948YuyEPe/grp_traj_pro/A_activite/A_type_emploi">
+          <label>A_Type_Emploi</label>
+          <group ref="/aTUogkKQGXyf3948YuyEPe/grp_traj_pro/A_activite/A_type_emploi/E_type_1">
+            <label>E_Type_1</label>
+            <select1 ref="/aTUogkKQGXyf3948YuyEPe/grp_traj_pro/A_activite/A_type_emploi/E_type_1/V_type_emploi_1">
+              <label>Quel était le type de votre emploi ?</label>
+              <itemset nodeset="instance('type_emploi')/root/item">
+                <value ref="name"/>
+                <label ref="label"/>
+              </itemset>
+            </select1>
+          </group>
+        </group>
+        <group ref="/aTUogkKQGXyf3948YuyEPe/grp_traj_pro/A_activite/A_activite_entreprise">
+          <label>A_Activite_entreprise</label>
+          <group ref="/aTUogkKQGXyf3948YuyEPe/grp_traj_pro/A_activite/A_activite_entreprise/E_Activite_entreprise_1">
+            <label>E_Activite_entreprise_1</label>
+            <input ref="/aTUogkKQGXyf3948YuyEPe/grp_traj_pro/A_activite/A_activite_entreprise/E_Activite_entreprise_1/V_activite_entreprise_1">
+              <label>Quelle était l'activité de l'établissement qui vous employait ?</label>
+            </input>
+          </group>
+        </group>
+        <group ref="/aTUogkKQGXyf3948YuyEPe/grp_traj_pro/A_activite/group_sc3ki23">
+          <label>Filtre</label>
+          <select1 ref="/aTUogkKQGXyf3948YuyEPe/grp_traj_pro/A_activite/group_sc3ki23/job_en_cours">
+            <label>Exercez-vous toujours cette activité ?</label>
+            <itemset nodeset="instance('yes_no')/root/item">
+              <value ref="name"/>
+              <label ref="label"/>
+            </itemset>
+          </select1>
+        </group>
+        <input appearance="year" ref="/aTUogkKQGXyf3948YuyEPe/grp_traj_pro/A_activite/Quand_avez_vous_term_e_premi_re_activit_">
+          <label>Quand avez-vous terminé votre première activité ?</label>
+        </input>
+        <group ref="/aTUogkKQGXyf3948YuyEPe/grp_traj_pro/A_activite/E_activite_n">
+          <label>E_Activité_n</label>
+          <repeat nodeset="/aTUogkKQGXyf3948YuyEPe/grp_traj_pro/A_activite/E_activite_n">
+            <input ref="/aTUogkKQGXyf3948YuyEPe/grp_traj_pro/A_activite/E_activite_n/Q_activite_n">
+              <label> Pouvez-vous me préciser les activités professionnelles d'une durée supérieure ou égale à un an que vous avez exercées successivement après <output value=" /aTUogkKQGXyf3948YuyEPe/grp_traj_pro/A_activite/E_activite_1/V_activite_1 "/> ? </label>
+            </input>
+            <input ref="/aTUogkKQGXyf3948YuyEPe/grp_traj_pro/A_activite/E_activite_n/SD_activite_n">
+              <label>Quand avez-vous débuté l'activité suivante ?</label>
+            </input>
+            <input ref="/aTUogkKQGXyf3948YuyEPe/grp_traj_pro/A_activite/E_activite_n/V_activite_n">
+              <label>Quelle activitié professionnelle exerciez-vous (métier) ?</label>
+            </input>
+            <group ref="/aTUogkKQGXyf3948YuyEPe/grp_traj_pro/A_activite/E_activite_n/A_Status_Emploi2">
+              <label>A_Status_Emploi</label>
+              <group ref="/aTUogkKQGXyf3948YuyEPe/grp_traj_pro/A_activite/E_activite_n/A_Status_Emploi2/E_status_n">
+                <label>E_Status_n</label>
+                <select1 ref="/aTUogkKQGXyf3948YuyEPe/grp_traj_pro/A_activite/E_activite_n/A_Status_Emploi2/E_status_n/V_status_n">
+                  <label>Quel statut aviez-vous ?</label>
+                  <itemset nodeset="instance('statut_pro')/root/item">
+                    <value ref="name"/>
+                    <label ref="label"/>
+                  </itemset>
+                </select1>
+              </group>
+            </group>
+            <group ref="/aTUogkKQGXyf3948YuyEPe/grp_traj_pro/A_activite/E_activite_n/A_type_emploi2">
+              <label>A_Type_Emploi</label>
+              <group ref="/aTUogkKQGXyf3948YuyEPe/grp_traj_pro/A_activite/E_activite_n/A_type_emploi2/E_type_n">
+                <label>E_Type_n</label>
+                <select1 ref="/aTUogkKQGXyf3948YuyEPe/grp_traj_pro/A_activite/E_activite_n/A_type_emploi2/E_type_n/V_type_emploi_n">
+                  <label>Quel était le type de votre emploi ?</label>
+                  <itemset nodeset="instance('type_emploi')/root/item">
+                    <value ref="name"/>
+                    <label ref="label"/>
+                  </itemset>
+                </select1>
+              </group>
+            </group>
+            <group ref="/aTUogkKQGXyf3948YuyEPe/grp_traj_pro/A_activite/E_activite_n/A_activite_entreprise2">
+              <label>A_Activite_entreprise</label>
+              <group ref="/aTUogkKQGXyf3948YuyEPe/grp_traj_pro/A_activite/E_activite_n/A_activite_entreprise2/E_Activite_entreprise_n">
+                <label>E_Activite_entreprise_n</label>
+                <input ref="/aTUogkKQGXyf3948YuyEPe/grp_traj_pro/A_activite/E_activite_n/A_activite_entreprise2/E_Activite_entreprise_n/V_activite_entreprise_n">
+                  <label>Quelle était l'activité de l'établissement qui vous employait ?</label>
+                </input>
+              </group>
+            </group>
+            <group ref="/aTUogkKQGXyf3948YuyEPe/grp_traj_pro/A_activite/E_activite_n/group_sc3ki23_001">
+              <label>Filtre</label>
+              <select1 ref="/aTUogkKQGXyf3948YuyEPe/grp_traj_pro/A_activite/E_activite_n/group_sc3ki23_001/job_en_cours_n">
+                <label>Exercez-vous toujours cette activité ?</label>
+                <itemset nodeset="instance('yes_no')/root/item">
+                  <value ref="name"/>
+                  <label ref="label"/>
+                </itemset>
+              </select1>
+            </group>
+            <input appearance="year" ref="/aTUogkKQGXyf3948YuyEPe/grp_traj_pro/A_activite/E_activite_n/Quand_avez_vous_term_e_premi_re_activit__001">
+              <label>Quand avez-vous terminé votre première activité ?</label>
+            </input>
+          </repeat>
+        </group>
+        <group ref="/aTUogkKQGXyf3948YuyEPe/grp_traj_pro/A_activite/group_pw35g06">
+          <label>Verification et ask absence</label>
+          <select1 ref="/aTUogkKQGXyf3948YuyEPe/grp_traj_pro/A_activite/group_pw35g06/Pouvez_vous_me_pr_ci_ssait_de_p_riodes_de">
+            <label>Pouvez-vous me préciser pour ces périodes sans emploi s'il s'agissait de périodes de....</label>
+            <itemset nodeset="instance('sa55v49')/root/item">
+              <value ref="name"/>
+              <label ref="label"/>
+            </itemset>
+          </select1>
+        </group>
+      </group>
+    </group>
+    <group ref="/aTUogkKQGXyf3948YuyEPe/grp_famille">
+      <label>V. Trajectoire familiale</label>
+      <input ref="/aTUogkKQGXyf3948YuyEPe/grp_famille/intro_parents">
+        <label>Nous allons commencer par parler de vos parents et des périodes durant lesquelles vous avez vécu avec eux.</label>
+        <hint>Si vous avez été adopté à la naissance, il est question de vos parents adoptifs</hint>
+      </input>
+      <group appearance="field-list" ref="/aTUogkKQGXyf3948YuyEPe/grp_famille/grp_pere">
+        <label>A_Info sur le père</label>
+        <select1 ref="/aTUogkKQGXyf3948YuyEPe/grp_famille/grp_pere/pere_vivant">
+          <label>Pourriez-vous me dire si votre père vit encore ?</label>
+          <itemset nodeset="instance('oui_non')/root/item">
+            <value ref="name"/>
+            <label ref="label"/>
+          </itemset>
+        </select1>
+        <input ref="/aTUogkKQGXyf3948YuyEPe/grp_famille/grp_pere/pere_deces">
+          <label>Quand est-il décédé ?</label>
+          <hint>Année du décès (ou 9999)</hint>
+        </input>
+        <input ref="/aTUogkKQGXyf3948YuyEPe/grp_famille/grp_pere/note_age_pere">
+          <label> Âge au décès de votre père : <output value=" /aTUogkKQGXyf3948YuyEPe/grp_famille/grp_pere/age_pere_deces "/> ans </label>
+        </input>
+      </group>
+      <group appearance="field-list" ref="/aTUogkKQGXyf3948YuyEPe/grp_famille/grp_cohab_pere">
+        <label>A_Période de cohabitation avec le père</label>
+        <input ref="/aTUogkKQGXyf3948YuyEPe/grp_famille/grp_cohab_pere/debut_cohab_pere">
+          <label>Année de début</label>
+        </input>
+        <input ref="/aTUogkKQGXyf3948YuyEPe/grp_famille/grp_cohab_pere/fin_cohab_pere">
+          <label>Année de fin</label>
+        </input>
+        <input ref="/aTUogkKQGXyf3948YuyEPe/grp_famille/grp_cohab_pere/note_cohab_pere">
+          <label> Vous aviez entre <output value=" /aTUogkKQGXyf3948YuyEPe/grp_famille/grp_cohab_pere/age_debut_cohab_pere "/> et <output value=" /aTUogkKQGXyf3948YuyEPe/grp_famille/grp_cohab_pere/age_fin_cohab_pere "/> ans. </label>
+        </input>
+      </group>
+      <group appearance="field-list" ref="/aTUogkKQGXyf3948YuyEPe/grp_famille/grp_mere">
+        <label>A_Info sur la mère</label>
+        <select1 ref="/aTUogkKQGXyf3948YuyEPe/grp_famille/grp_mere/mere_vivante">
+          <label>Pourriez-vous me dire si votre mère vit encore ?</label>
+          <itemset nodeset="instance('oui_non')/root/item">
+            <value ref="name"/>
+            <label ref="label"/>
+          </itemset>
+        </select1>
+        <input ref="/aTUogkKQGXyf3948YuyEPe/grp_famille/grp_mere/mere_deces">
+          <label>Quand est-elle décédée ?</label>
+          <hint>Année du décès (ou 9999)</hint>
+        </input>
+        <input ref="/aTUogkKQGXyf3948YuyEPe/grp_famille/grp_mere/note_age_mere">
+          <label> Âge au décès de votre mère : <output value=" /aTUogkKQGXyf3948YuyEPe/grp_famille/grp_mere/age_mere_deces "/> ans </label>
+        </input>
+      </group>
+      <group appearance="field-list" ref="/aTUogkKQGXyf3948YuyEPe/grp_famille/grp_cohab_mere">
+        <label>A_Période de cohabitation avec la mère</label>
+        <input ref="/aTUogkKQGXyf3948YuyEPe/grp_famille/grp_cohab_mere/debut_cohab_mere">
+          <label>Année de début</label>
+          <hint>Saisissez 9999 si vous avez oublié</hint>
+        </input>
+        <input ref="/aTUogkKQGXyf3948YuyEPe/grp_famille/grp_cohab_mere/fin_cohab_mere">
+          <label>Année de fin</label>
+          <hint>Saisissez 9999 si vous avez oublié</hint>
+        </input>
+        <input ref="/aTUogkKQGXyf3948YuyEPe/grp_famille/grp_cohab_mere/note_cohab_mere">
+          <label> Vous aviez entre <output value=" /aTUogkKQGXyf3948YuyEPe/grp_famille/grp_cohab_mere/age_debut_cohab_mere "/> et <output value=" /aTUogkKQGXyf3948YuyEPe/grp_famille/grp_cohab_mere/age_fin_cohab_mere "/> ans. </label>
+        </input>
+      </group>
+      <group appearance="field-list" ref="/aTUogkKQGXyf3948YuyEPe/grp_famille/grp_foyer_fratrie">
+        <label>A_Foyer et Fratrie</label>
+        <input ref="/aTUogkKQGXyf3948YuyEPe/grp_famille/grp_foyer_fratrie/depart_foyer">
+          <label>A quel âge avez-vous quitté définitivement le domicile de vos parents (pour plus d'un an) ?</label>
+        </input>
+        <input ref="/aTUogkKQGXyf3948YuyEPe/grp_famille/grp_foyer_fratrie/freres_soeurs">
+          <label>Combien de frères et sœurs avez-vous eu ?</label>
+        </input>
+      </group>
+      <input ref="/aTUogkKQGXyf3948YuyEPe/grp_famille/intro_matrimoniale">
+        <label>Situation matrimoniale : Nous allons commencer par décrire votre situation conjugale actuelle.</label>
+        <hint>Il est parfois possible d'être en couple sans vivre avec son conjoint.</hint>
+      </input>
+      <group appearance="field-list" ref="/aTUogkKQGXyf3948YuyEPe/grp_famille/grp_couple_global">
+        <label>A_Situation conjugale</label>
+        <select1 ref="/aTUogkKQGXyf3948YuyEPe/grp_famille/grp_couple_global/couple_actuel">
+          <label>Actuellement vivez-vous en couple marié ou non ?</label>
+          <itemset nodeset="instance('oui_non')/root/item">
+            <value ref="name"/>
+            <label ref="label"/>
+          </itemset>
+        </select1>
+        <select1 ref="/aTUogkKQGXyf3948YuyEPe/grp_famille/grp_couple_global/couple_passe">
+          <label>Avez-vous déjà vécu en couple ?</label>
+          <itemset nodeset="instance('oui_non')/root/item">
+            <value ref="name"/>
+            <label ref="label"/>
+          </itemset>
+        </select1>
+      </group>
+      <input ref="/aTUogkKQGXyf3948YuyEPe/grp_famille/nb_conjoints">
+        <label>Combien de conjoints avez-vous eu ?</label>
+      </input>
+      <group ref="/aTUogkKQGXyf3948YuyEPe/grp_famille/rep_conjoints">
+        <label>Conjoints</label>
+        <repeat nodeset="/aTUogkKQGXyf3948YuyEPe/grp_famille/rep_conjoints" jr:count=" /aTUogkKQGXyf3948YuyEPe/grp_famille/nb_conjoints ">
+          <group appearance="field-list" ref="/aTUogkKQGXyf3948YuyEPe/grp_famille/rep_conjoints/grp_conjoint_id">
+            <label>A_Identité du conjoint</label>
+            <input ref="/aTUogkKQGXyf3948YuyEPe/grp_famille/rep_conjoints/grp_conjoint_id/prenom_conjoint">
+              <label>Pouvez-vous me donner le prénom de votre conjoint ?</label>
+            </input>
+            <input ref="/aTUogkKQGXyf3948YuyEPe/grp_famille/rep_conjoints/grp_conjoint_id/annee_naissance_conj">
+              <label> Quelle est l'année de naissance de <output value=" ../prenom_conjoint "/> ? </label>
+              <hint>Saisissez 9999 si oublié</hint>
+            </input>
+          </group>
+          <input ref="/aTUogkKQGXyf3948YuyEPe/grp_famille/rep_conjoints/intro_couple">
+            <label> Nous allons évoquer les différentes périodes de vie en couple avec <output value=" ../grp_conjoint_id/prenom_conjoint "/>. </label>
+          </input>
+          <group appearance="field-list" ref="/aTUogkKQGXyf3948YuyEPe/grp_famille/rep_conjoints/grp_dates_union">
+            <label>A_Caractéristiques de l'union</label>
+            <input ref="/aTUogkKQGXyf3948YuyEPe/grp_famille/rep_conjoints/grp_dates_union/conj_debut_union">
+              <label> En quelle année a débuté votre union avec <output value=" ../../grp_conjoint_id/prenom_conjoint "/> ? </label>
+              <hint>Saisissez 9999 si oublié</hint>
+            </input>
+            <select1 ref="/aTUogkKQGXyf3948YuyEPe/grp_famille/rep_conjoints/grp_dates_union/conj_union_libre">
+              <label> Avez-vous vécu en union libre avec <output value=" ../../grp_conjoint_id/prenom_conjoint "/> ? </label>
+              <itemset nodeset="instance('oui_non')/root/item">
+                <value ref="name"/>
+                <label ref="label"/>
+              </itemset>
+            </select1>
+            <select1 ref="/aTUogkKQGXyf3948YuyEPe/grp_famille/rep_conjoints/grp_dates_union/conj_marie">
+              <label> Vous êtes-vous marié(e) avec <output value=" ../../grp_conjoint_id/prenom_conjoint "/> ? </label>
+              <itemset nodeset="instance('oui_non')/root/item">
+                <value ref="name"/>
+                <label ref="label"/>
+              </itemset>
+            </select1>
+            <select1 ref="/aTUogkKQGXyf3948YuyEPe/grp_famille/rep_conjoints/grp_dates_union/conj_tjrs_ensemble">
+              <label> Êtes-vous toujours en couple avec <output value=" ../../grp_conjoint_id/prenom_conjoint "/> aujourd'hui ? </label>
+              <itemset nodeset="instance('oui_non')/root/item">
+                <value ref="name"/>
+                <label ref="label"/>
+              </itemset>
+            </select1>
+            <input ref="/aTUogkKQGXyf3948YuyEPe/grp_famille/rep_conjoints/grp_dates_union/conj_fin_union">
+              <label> En quelle année s'est terminée votre union avec <output value=" ../../grp_conjoint_id/prenom_conjoint "/> ? </label>
+              <hint>Saisissez 9999 si oublié</hint>
+            </input>
+            <select1 ref="/aTUogkKQGXyf3948YuyEPe/grp_famille/rep_conjoints/grp_dates_union/conj_rupture_type">
+              <label> Vous êtes-vous séparés ou divorcés de <output value=" ../../grp_conjoint_id/prenom_conjoint "/> ? </label>
+              <itemset nodeset="instance('type_rupture')/root/item">
+                <value ref="name"/>
+                <label ref="label"/>
+              </itemset>
+            </select1>
+            <input ref="/aTUogkKQGXyf3948YuyEPe/grp_famille/rep_conjoints/grp_dates_union/note_age_union">
+              <label> Âge au début de cette union : <output value=" ../age_debut_union "/> ans </label>
+            </input>
+          </group>
+          <group ref="/aTUogkKQGXyf3948YuyEPe/grp_famille/rep_conjoints/rep_cohab_conj">
+            <label> Périodes de vie commune avec <output value=" ../grp_conjoint_id/prenom_conjoint "/> (dans le même logement) </label>
+            <repeat nodeset="/aTUogkKQGXyf3948YuyEPe/grp_famille/rep_conjoints/rep_cohab_conj" appearance="field-list">
+              <input ref="/aTUogkKQGXyf3948YuyEPe/grp_famille/rep_conjoints/rep_cohab_conj/debut_cohab_conj">
+                <label> Année de début de vie commune avec <output value=" ../../grp_conjoint_id/prenom_conjoint "/> </label>
+                <hint>Saisissez 9999 si vous avez oublié</hint>
+              </input>
+              <input ref="/aTUogkKQGXyf3948YuyEPe/grp_famille/rep_conjoints/rep_cohab_conj/fin_cohab_conj">
+                <label>Année de fin de vie commune</label>
+                <hint>Saisissez 9999 si vous avez oublié</hint>
+              </input>
+            </repeat>
+          </group>
+        </repeat>
+      </group>
+      <input ref="/aTUogkKQGXyf3948YuyEPe/grp_famille/intro_enfant">
+        <label>Introduction enfant : Nous allons maintenant évoquer les enfants que vous avez pu avoir.</label>
+        <hint>Il est parfois possible d'avoir des enfants qui sont décédés.</hint>
+      </input>
+      <select1 ref="/aTUogkKQGXyf3948YuyEPe/grp_famille/a_enfants">
+        <label>Avez-vous eu des enfants ?</label>
+        <itemset nodeset="instance('oui_non')/root/item">
+          <value ref="name"/>
+          <label ref="label"/>
+        </itemset>
+      </select1>
+      <input ref="/aTUogkKQGXyf3948YuyEPe/grp_famille/nb_enfants">
+        <label>Combien d'enfants avez-vous eu ?</label>
+      </input>
+      <group ref="/aTUogkKQGXyf3948YuyEPe/grp_famille/rep_enfants">
+        <label>Enfants</label>
+        <repeat nodeset="/aTUogkKQGXyf3948YuyEPe/grp_famille/rep_enfants" jr:count=" /aTUogkKQGXyf3948YuyEPe/grp_famille/nb_enfants ">
+          <group appearance="field-list" ref="/aTUogkKQGXyf3948YuyEPe/grp_famille/rep_enfants/grp_enfant_attr">
+            <label>A_ enfant</label>
+            <input ref="/aTUogkKQGXyf3948YuyEPe/grp_famille/rep_enfants/grp_enfant_attr/prenom_enfant">
+              <label>Pouvez-vous me donner le prénom de votre enfant ?</label>
+            </input>
+            <input ref="/aTUogkKQGXyf3948YuyEPe/grp_famille/rep_enfants/grp_enfant_attr/annee_naissance_enf">
+              <label> En quelle année est né(e) <output value=" ../prenom_enfant "/> ? </label>
+              <hint>Saisissez 9999 si oublié</hint>
+            </input>
+            <select1 ref="/aTUogkKQGXyf3948YuyEPe/grp_famille/rep_enfants/grp_enfant_attr/sexe_enfant">
+              <label> A sa naissance, <output value=" ../prenom_enfant "/> était-il/elle de sexe ? </label>
+              <itemset nodeset="instance('sexe')/root/item">
+                <value ref="name"/>
+                <label ref="label"/>
+              </itemset>
+            </select1>
+            <input ref="/aTUogkKQGXyf3948YuyEPe/grp_famille/rep_enfants/grp_enfant_attr/deces_enfant">
+              <label> Si <output value=" ../prenom_enfant "/> est décédé(e), indiquez l'année de son décès </label>
+              <hint>Laissez vide ou 9999 si oublié</hint>
+            </input>
+            <input ref="/aTUogkKQGXyf3948YuyEPe/grp_famille/rep_enfants/grp_enfant_attr/note_age_naissance">
+              <label> Vous aviez <output value=" ../age_naissance_enfant "/> ans à la naissance de <output value=" ../prenom_enfant "/>. </label>
+            </input>
+          </group>
+          <group appearance="field-list" ref="/aTUogkKQGXyf3948YuyEPe/grp_famille/rep_enfants/group_wg4xu13">
+            <label>A_Cohabitation enfant</label>
+            <input ref="/aTUogkKQGXyf3948YuyEPe/grp_famille/rep_enfants/group_wg4xu13/Ann_e_de_d_but">
+              <label>Année de début</label>
+              <hint>Saisissez 9999 si vous avez oublié</hint>
+            </input>
+            <input ref="/aTUogkKQGXyf3948YuyEPe/grp_famille/rep_enfants/group_wg4xu13/Ann_e_de_fin">
+              <label>Année de fin</label>
+              <hint>Saisissez 9999 si vous avez oublié</hint>
+            </input>
+          </group>
+        </repeat>
+      </group>
+    </group>
+  </h:body>
+</h:html>

@@ -1,0 +1,283 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <title>Enketo Offline with Custom Timeline</title>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+  <style>
+    /* Modern Premium Reset */
+    body, html {
+      margin: 0;
+      padding: 0;
+      height: 100vh;
+      font-family: 'Inter', system-ui, -apple-system, sans-serif;
+      overflow: hidden;
+      background-color: #f7f9fc;
+      color: #2c3e50;
+    }
+
+    /* Custom Scrollbar for a sleek look */
+    ::-webkit-scrollbar {
+      width: 6px;
+      height: 6px;
+    }
+    ::-webkit-scrollbar-track {
+      background: transparent;
+    }
+    ::-webkit-scrollbar-thumb {
+      background: #cbd5e1;
+      border-radius: 10px;
+    }
+    ::-webkit-scrollbar-thumb:hover {
+      background: #94a3b8;
+    }
+
+    .split {
+        display: flex;
+        flex-direction: row;
+        height: 100vh;
+    }
+    .split.vertical {
+        flex-direction: column;
+        height: 100%;
+    }
+    
+    /* Gutter styling */
+    .gutter {
+        background-color: #e2e8f0;
+        background-repeat: no-repeat;
+        background-position: 50%;
+        transition: background-color 0.2s ease;
+    }
+    .gutter:hover {
+        background-color: #cbd5e1;
+    }
+    .gutter.gutter-horizontal {
+        cursor: col-resize;
+        background-image: url('data:image/svg+xml;utf8,<svg xmlns="http://www.w3.org/2000/svg" width="4" height="20" viewBox="0 0 4 20"><circle cx="2" cy="2" r="1.5" fill="%2394a3b8"/><circle cx="2" cy="10" r="1.5" fill="%2394a3b8"/><circle cx="2" cy="18" r="1.5" fill="%2394a3b8"/></svg>');
+    }
+    .gutter.gutter-vertical {
+        cursor: row-resize;
+        background-image: url('data:image/svg+xml;utf8,<svg xmlns="http://www.w3.org/2000/svg" width="20" height="4" viewBox="0 0 20 4"><circle cx="2" cy="2" r="1.5" fill="%2394a3b8"/><circle cx="10" cy="2" r="1.5" fill="%2394a3b8"/><circle cx="18" cy="2" r="1.5" fill="%2394a3b8"/></svg>');
+    }
+
+    /* Layout Panes */
+    #questionnaire { 
+        overflow-y: auto; 
+        padding: 24px; 
+        background-color: #ffffff; 
+        box-shadow: 4px 0 15px rgba(0,0,0,0.03); 
+        z-index: 10; 
+    }
+    #trajectories { 
+        display: flex; 
+        flex-direction: column; 
+        overflow: hidden; 
+        background-color: #f8fafc;
+    }
+    #canvas { 
+        overflow-y: auto; 
+        padding: 24px; 
+        flex: 1;
+    }
+    #bricks { 
+        overflow-y: auto; 
+        padding: 24px; 
+        background: #ffffff; 
+        border-top: 1px solid #e2e8f0; 
+        box-shadow: 0 -4px 15px rgba(0,0,0,0.02);
+    }
+    #timeline { width: 100%; border: none; }
+    
+    h2 { 
+        margin-top: 0; 
+        font-weight: 600; 
+        color: #1e293b; 
+        font-size: 22px; 
+        letter-spacing: -0.5px;
+        margin-bottom: 20px;
+    }
+    
+    /* Timeline item styles - Premium Pills */
+    .vis-item.orange-pill { background-color: #ffedd5 !important; color: #9a3412; }
+    .vis-item.blue-pill { background-color: #e0f2fe !important; color: #075985; }
+    .vis-item.green-pill { background-color: #dcfce7 !important; color: #166534; }
+    .vis-item.yellow-pill { background-color: #fef9c3 !important; color: #854d0e; }
+    
+    .vis-item { 
+        border-radius: 24px !important; 
+        border: none !important; 
+        height: 36px !important;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        box-shadow: 0 2px 4px rgba(0,0,0,0.04) !important;
+        font-size: 13px;
+        font-weight: 500;
+        transition: all 0.2s ease;
+    }
+    .vis-item:hover {
+        filter: brightness(0.95);
+        box-shadow: 0 4px 6px rgba(0,0,0,0.08) !important;
+    }
+    .vis-item .vis-item-content {
+        padding: 0 16px !important;
+        width: 100%;
+        text-align: center;
+        transform: translateY(-2px);
+    }
+    
+    /* Highlight state */
+    .vis-item.highlight {
+        border: 2px solid rgba(15, 23, 42, 0.15) !important;
+        transform: scale(1.03) translateY(-2px);
+        box-shadow: 0 8px 16px rgba(0,0,0,0.08) !important;
+        z-index: 100;
+    }
+
+    /* Groups and labels */
+    .vis-timeline {
+        border: none !important;
+        background-color: transparent;
+    }
+    .vis-labelset .vis-label {
+        border-bottom: 1px solid transparent !important;
+    }
+    .vis-group { 
+        border-bottom: 1px dashed #cbd5e1 !important; 
+    }
+    
+    /* Titles styling */
+    .group-title {
+        background-color: #f1f5f9;
+        padding: 6px 16px;
+        border-radius: 20px;
+        font-weight: 600;
+        color: #334155;
+        display: inline-block;
+        font-size: 13px;
+        margin-top: 6px;
+        border: 1px solid #e2e8f0;
+    }
+    .sub-group-title {
+        display: flex;
+        align-items: center;
+        color: #64748b;
+        font-size: 13px;
+        padding-left: 8px;
+        font-weight: 500;
+    }
+    .sub-group-title .dot {
+        display: inline-block;
+        width: 6px;
+        height: 6px;
+        background-color: #94a3b8;
+        border-radius: 50%;
+        margin-right: 10px;
+    }
+
+    /* Custom vertical bar */
+    .vis-custom-time.custom-bar {
+        width: 2px;
+        background-color: #cbd5e1;
+        z-index: 10;
+        cursor: ew-resize;
+    }
+    .vis-custom-time.custom-bar::before {
+        content: '● Connecté (Enquêteur)';
+        position: absolute;
+        top: -28px;
+        left: -75px;
+        background-color: #10b981;
+        color: white;
+        padding: 5px 14px;
+        border-radius: 20px;
+        font-size: 12px;
+        font-weight: 600;
+        white-space: nowrap;
+        box-shadow: 0 4px 6px rgba(16, 185, 129, 0.25);
+        transition: transform 0.2s;
+    }
+    .vis-custom-time.custom-bar:hover::before {
+        transform: scale(1.05);
+    }
+    .vis-time-axis .vis-text {
+        color: #64748b;
+        font-weight: 500;
+        font-size: 13px;
+    }
+    .vis-time-axis .vis-grid.vis-minor {
+        border-color: #e2e8f0;
+    }
+    .vis-time-axis .vis-grid.vis-major {
+        border-color: #cbd5e1;
+    }
+
+    /* Synthèse Cards Styling */
+    .synthese-card {
+        background: #ffffff;
+        border: 1px solid #e2e8f0;
+        border-radius: 12px;
+        padding: 16px;
+        margin-bottom: 16px;
+        box-shadow: 0 2px 4px rgba(0,0,0,0.02);
+        transition: transform 0.2s, box-shadow 0.2s;
+        display: flex;
+        flex-direction: column;
+        gap: 8px;
+    }
+    .synthese-card:hover {
+        transform: translateY(-2px);
+        box-shadow: 0 8px 12px rgba(0,0,0,0.05);
+    }
+    .synthese-card-header {
+        font-size: 12px;
+        text-transform: uppercase;
+        letter-spacing: 0.5px;
+        color: #64748b;
+        font-weight: 600;
+    }
+    .synthese-card-title {
+        font-size: 16px;
+        font-weight: 600;
+        color: #0f172a;
+        margin: 0;
+    }
+    .synthese-card-date {
+        display: inline-block;
+        background-color: #f1f5f9;
+        color: #475569;
+        font-size: 12px;
+        padding: 4px 10px;
+        border-radius: 12px;
+        font-weight: 500;
+        width: max-content;
+    }
+  </style>
+</head>
+<body>
+
+  <div class="split">
+    <!-- Left side -->
+    <div id="questionnaire">
+      <h2>Questionnaire (Enketo)</h2>
+      <div id="app"></div>
+    </div>
+
+    <!-- Right side -->
+    <div id="trajectories" class="split vertical">
+        <div id="canvas">
+            <h2>Calendrier de vie</h2>
+            <div id="timeline"></div>  
+        </div>
+        
+        <div id="bricks">
+            <h2>Synthèse</h2>
+            <div id="moreInfos"></div>
+        </div>  
+    </div>
+  </div>
+
+  <script type="module" src="/src/main.js"></script>
+</body>
+</html>

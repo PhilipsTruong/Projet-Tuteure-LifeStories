@@ -1,0 +1,16 @@
+.or-group{
+  border: 2px solid #bbbb;
+  border-radius: 15px;
+  margin-left: 3em;
+  margin-right: 3em;
+}
+
+.or > h4, .or-group > h4 {
+    text-align: inherit;
+    margin-top: 9px;
+    margin-bottom: 9px;
+}
+
+body{
+  background-color: #fdfaf4;
+}

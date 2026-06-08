@@ -1,0 +1,225 @@
+{
+  "trajectories": [
+    {
+      "id": "grp_traj_residentielle",
+      "attributes": [
+        {
+          "id": "A_commune",
+          "episodes": [
+            {
+              "id": "E_commune_1",
+              "question": "Q_commune_1",
+              "value": "V_commune_1",
+              "descriptors": [
+                "D_pays_c1",
+                "D_dept_c1"
+              ],
+              "startDate": null,
+              "endDate": null,
+              "status": null
+            },
+            {
+              "id": "E_commune_n",
+              "question": "Q_commune_n",
+              "value": "V_commune_n",
+              "descriptors": [
+                "D_pays_cn",
+                "D_dept_cn"
+              ],
+              "startDate": "SD_cn",
+              "endDate": null,
+              "status": null
+            }
+          ],
+          "events": [],
+          "type": "primary",
+          "dependsOn": null
+        },
+        {
+          "id": "A_logement",
+          "episodes": [
+            {
+              "id": "E_logement_n",
+              "question": "Q_logement_n",
+              "value": null,
+              "descriptors": [],
+              "startDate": "SD_ln",
+              "endDate": "ED_ln",
+              "status": "ST_logement_n"
+            }
+          ],
+          "events": [],
+          "type": "secondary",
+          "dependsOn": null
+        },
+        {
+          "id": "A_status_res",
+          "episodes": [
+            {
+              "id": "E_status_res",
+              "question": "Q_statut_res",
+              "value": "V_statut_res2",
+              "descriptors": [],
+              "startDate": null,
+              "endDate": null,
+              "status": null
+            }
+          ],
+          "events": [],
+          "type": "secondary",
+          "dependsOn": "A_logement"
+        }
+      ]
+    },
+    {
+      "id": "grp_traj_scolaire",
+      "attributes": [
+        {
+          "id": "A_Niveau_scolaire",
+          "episodes": [
+            {
+              "id": "E_niveau_scolaire_n",
+              "question": null,
+              "value": "V_niveau_scolaire_2",
+              "descriptors": [
+                "D_type_periode"
+              ],
+              "startDate": "SD_scol",
+              "endDate": "ED_scol",
+              "status": null
+            }
+          ],
+          "events": [],
+          "type": "primary",
+          "dependsOn": null
+        },
+        {
+          "id": "A_type_etablissement",
+          "episodes": [
+            {
+              "id": "E_type_etablissement",
+              "question": null,
+              "value": "V_type_etablissement_n",
+              "descriptors": [],
+              "startDate": null,
+              "endDate": null,
+              "status": null
+            }
+          ],
+          "events": [],
+          "type": "secondary",
+          "dependsOn": "A_Niveau_scolaire"
+        }
+      ]
+    },
+    {
+      "id": "grp_traj_pro",
+      "attributes": [
+        {
+          "id": "A_activite",
+          "episodes": [
+            {
+              "id": "E_activite_1",
+              "question": null,
+              "value": "V_activite_1",
+              "descriptors": [],
+              "startDate": "SD_activite_1",
+              "endDate": null,
+              "status": null
+            },
+            {
+              "id": "E_activite_n",
+              "question": "Q_activite_n",
+              "value": "V_activite_n",
+              "descriptors": [],
+              "startDate": "SD_activite_n",
+              "endDate": null,
+              "status": null
+            }
+          ],
+          "events": [],
+          "type": "primary",
+          "dependsOn": null
+        },
+        {
+          "id": "A_Status_Emploi",
+          "episodes": [
+            {
+              "id": "E_status_1",
+              "question": null,
+              "value": "V_status_emploi_1",
+              "descriptors": [],
+              "startDate": null,
+              "endDate": null,
+              "status": null
+            },
+            {
+              "id": "E_status_n",
+              "question": null,
+              "value": "V_status_n",
+              "descriptors": [],
+              "startDate": null,
+              "endDate": null,
+              "status": null
+            }
+          ],
+          "events": [],
+          "type": "secondary",
+          "dependsOn": "A_activite"
+        },
+        {
+          "id": "A_type_emploi",
+          "episodes": [
+            {
+              "id": "E_type_1",
+              "question": null,
+              "value": "V_type_emploi_1",
+              "descriptors": [],
+              "startDate": null,
+              "endDate": null,
+              "status": null
+            },
+            {
+              "id": "E_type_n",
+              "question": null,
+              "value": "V_type_emploi_n",
+              "descriptors": [],
+              "startDate": null,
+              "endDate": null,
+              "status": null
+            }
+          ],
+          "events": [],
+          "type": "secondary",
+          "dependsOn": "A_activite"
+        },
+        {
+          "id": "A_activite_entreprise",
+          "episodes": [
+            {
+              "id": "E_Activite_entreprise_1",
+              "question": null,
+              "value": "V_activite_entreprise_1",
+              "descriptors": [],
+              "startDate": null,
+              "endDate": null,
+              "status": null
+            },
+            {
+              "id": "E_Activite_entreprise_n",
+              "question": null,
+              "value": "V_activite_entreprise_n",
+              "descriptors": [],
+              "startDate": null,
+              "endDate": null,
+              "status": null
+            }
+          ],
+          "events": [],
+          "type": "secondary",
+          "dependsOn": "A_activite"
+        }
+      ]
+    }
+  ]
+}
