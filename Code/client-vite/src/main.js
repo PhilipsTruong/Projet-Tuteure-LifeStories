@@ -4,7 +4,7 @@ import { DataSet } from 'vis-data';
 import 'vis-timeline/styles/vis-timeline-graph2d.css';
 import Split from 'split.js';
 
-// Setup Layout
+// Configuration de la disposition (Layout)
 Split(['#questionnaire', '#trajectories'], {
     sizes: [30, 70],
     minSize: 200,
@@ -30,27 +30,27 @@ const data = { modelStr };
 const form = new Form(formEl, data, {});
 await form.init();
 
-// --- Bắt đầu phần tích hợp Timeline nâng cao ---
+// --- Début de l'intégration avancée de la Timeline ---
 const container = document.getElementById('timeline');
 const items = new DataSet();
 const groups = new DataSet();
 
-// Hàm format tên nhóm để xoá các tiền tố A_, T_ và viết hoa chữ cái đầu
+// Fonction pour formater le nom du groupe (supprimer les préfixes A_, T_ et mettre en majuscule)
 function formatLabel(id) {
     let formatted = id.replace(/^[A-Z]_/i, '');
     formatted = formatted.replace(/_/g, ' ');
     return formatted.replace(/\b\w/g, l => l.toUpperCase());
 }
 
-// Trajectory to color map
+// Mapping des trajectoires vers les couleurs
 const colorMap = ["orange-pill", "blue-pill", "green-pill", "yellow-pill"];
 const trajColors = {};
 
 semanticModel.trajectories.forEach((traj, index) => {
   trajColors[traj.id] = colorMap[index % colorMap.length];
-  // Tạo nhóm cha (Quỹ đạo)
+  // Création du groupe parent (Trajectoire)
   groups.add({ id: traj.id, content: `<div class="group-title">${formatLabel(traj.id)}</div>`, showNested: true });
-  // Tạo các nhóm con (Thuộc tính)
+  // Création des sous-groupes (Attributs)
   traj.attributes.forEach(attr => {
     groups.add({ id: attr.id, content: `<div class="sub-group-title"><span class="dot"></span>${formatLabel(attr.id)}</div>`, nestedInGroup: traj.id });
   });
@@ -67,7 +67,7 @@ const timelineOptions = {
 
 const timeline = new Timeline(container, items, groups, timelineOptions);
 
-// Custom Vertical Time Bar logic
+// Logique de la barre de temps verticale personnalisée
 const stepSize = 1000 * 60 * 60 * 24; // 1 day
 let customTimeId = timeline.addCustomTime(new Date(new Date().setFullYear(new Date().getFullYear() - 1)), "custom-bar");
 
@@ -76,7 +76,7 @@ timeline.on("timechange", function (event) {
   var snappedTime = Math.round(selectedTime / stepSize) * stepSize;
   timeline.setCustomTime(new Date(snappedTime), customTimeId);
 
-  // Reset highlights
+  // Réinitialiser les surbrillances
   items.forEach((item) => {
     if (item.className && item.className.includes("highlight")) { 
       item.className = item.className.replace(" highlight", "");
@@ -96,7 +96,7 @@ timeline.on("timechange", function (event) {
       
       let groupObject = groups.get(item.group);
       
-      // Clean up the nested group name using formatLabel (if we want the Synthèse card to also look clean)
+      // Nettoyer le nom du groupe imbriqué avec formatLabel (pour que la carte Synthèse soit propre)
       let groupName = groupObject.nestedInGroup ? `${formatLabel(groupObject.nestedInGroup)} --> ${formatLabel(item.group)}` : formatLabel(item.group);
       
       let htmlContent = `
@@ -120,7 +120,7 @@ function updateTimeline() {
   const newItems = [];
   let itemId = 1;
 
-  // Cập nhật giới hạn của timeline dựa trên năm sinh (annee_naissance)
+  // Mettre à jour les limites de la timeline en fonction de l'année de naissance
   let birthYearStr = null;
   const anneeNaissanceNodes = xmlDoc.getElementsByTagName("annee_naissance");
   if (anneeNaissanceNodes.length > 0 && anneeNaissanceNodes[0].textContent) {
@@ -128,11 +128,11 @@ function updateTimeline() {
       const annee = parseInt(birthYearStr, 10);
       if (!isNaN(annee)) {
           let opts = { 
-              min: new Date(annee - 5, 0, 1), // Nới lỏng min lùi lại 5 năm để người dùng có khoảng trống kéo
-              max: new Date(new Date().getFullYear() + 5, 0, 1) // Ngăn kéo xa quá hiện tại
+              min: new Date(annee - 5, 0, 1), // Élargir le minimum de 5 ans en arrière pour laisser de l'espace de défilement
+              max: new Date(new Date().getFullYear() + 5, 0, 1) // Empêcher de défiler trop loin dans le futur
           };
           
-          // Tự động scale view để nhìn bao quát toàn bộ cuộc đời nếu nhập xong 4 số
+          // Zoom automatique pour voir toute la vie si 4 chiffres sont saisis
           if (birthYearStr.length >= 4 && annee > 1900 && annee <= new Date().getFullYear()) {
               if (!window.hasAutoZoomedToLifespan) {
                   opts.start = new Date(annee - 2, 0, 1);
@@ -140,7 +140,7 @@ function updateTimeline() {
                   window.hasAutoZoomedToLifespan = true;
               }
           } else {
-              window.hasAutoZoomedToLifespan = false; // Reset nếu họ xoá đi nhập lại
+              window.hasAutoZoomedToLifespan = false; // Réinitialiser s'ils effacent et saisissent à nouveau
           }
           
           timeline.setOptions(opts);
@@ -154,7 +154,7 @@ function updateTimeline() {
         let sdTag = episode.startDate;
         let edTag = episode.endDate;
         
-        // Nếu không có ngày bắt đầu, tìm từ attribute cha (phụ thuộc)
+        // S'il n'y a pas de date de début, chercher dans l'attribut parent (dépendance)
         if (!sdTag && attr.dependsOn) {
             const parentAttr = traj.attributes.find(a => a.id === attr.dependsOn);
             if (parentAttr) {
@@ -162,7 +162,7 @@ function updateTimeline() {
                 if (parentEp) sdTag = parentEp.startDate;
             }
         }
-        // Tương tự cho ngày kết thúc
+        // Même logique pour la date de fin
         if (!edTag && attr.dependsOn) {
             const parentAttr = traj.attributes.find(a => a.id === attr.dependsOn);
             if (parentAttr) {
@@ -171,7 +171,7 @@ function updateTimeline() {
             }
         }
         
-        // Nếu vẫn không có ngày bắt đầu, mặc định lấy năm sinh (Ví dụ cho commune đầu tiên)
+        // Si toujours pas de date de début, prendre l'année de naissance par défaut (Ex: pour la première commune)
         if (!sdTag) {
             sdTag = "annee_naissance";
         }
@@ -183,7 +183,7 @@ function updateTimeline() {
         const maxLen = Math.max(startNodes.length, endNodes.length, valueNodes.length);
 
         for (let i = 0; i < maxLen; i++) {
-            // Bỏ qua các node template của KoboToolbox
+            // Ignorer les nœuds template de KoboToolbox
             let isTemplate = false;
             let nodeToCheck = startNodes[i] || valueNodes[i] || endNodes[i];
             let p = nodeToCheck;
@@ -204,7 +204,21 @@ function updateTimeline() {
             let endVal = eNode ? eNode.textContent : null;
             const val = vNode ? vNode.textContent : null;
 
-            // Fallback: Tìm năm bắt đầu từ các trường annee_* hoặc age_* nếu startVal rỗng
+            // Traitement intelligent : Si l'utilisateur tape directement un âge (ex: 20) dans le champ Année/Date
+            if (startVal && startVal.trim() !== "" && birthYearStr) {
+                let parsedVal = parseInt(startVal.trim(), 10);
+                if (!isNaN(parsedVal) && parsedVal >= 0 && parsedVal <= 120) {
+                    startVal = (parseInt(birthYearStr, 10) + parsedVal).toString();
+                }
+            }
+            if (endVal && endVal.trim() !== "" && birthYearStr) {
+                let parsedVal = parseInt(endVal.trim(), 10);
+                if (!isNaN(parsedVal) && parsedVal >= 0 && parsedVal <= 120) {
+                    endVal = (parseInt(birthYearStr, 10) + parsedVal).toString();
+                }
+            }
+
+            // Fallback : Trouver l'année de début via les champs annee_* ou age_* si startVal est vide
             if ((!startVal || startVal.trim() === "") && vNode) {
                 let parent = vNode.parentNode;
                 if (parent) {
@@ -216,7 +230,7 @@ function updateTimeline() {
                             if ((tag.includes("annee") || tag.includes("date")) && (tag.includes("arrivee") || tag.includes("debut") || tag.includes("commence"))) {
                                 startVal = text;
                                 break;
-                            } else if (tag.includes("age") && (tag.includes("arrivee") || tag.includes("debut") || tag.includes("commence"))) {
+                            } else if (tag.includes("age") && !tag.includes("depart") && !tag.includes("fin") && !tag.includes("term")) {
                                 if (birthYearStr) {
                                     let age = parseInt(text, 10);
                                     if (!isNaN(age)) {
@@ -230,7 +244,7 @@ function updateTimeline() {
                 }
             }
 
-            // Fallback: Tìm năm kết thúc từ các trường annee_* hoặc age_* nếu endVal rỗng
+            // Fallback : Trouver l'année de fin via les champs annee_* ou age_* si endVal est vide
             if ((!endVal || endVal.trim() === "") && vNode) {
                 let parent = vNode.parentNode;
                 if (parent) {
@@ -257,18 +271,18 @@ function updateTimeline() {
             }
 
             if (!startVal || startVal.trim() === "") {
-                continue; // Không thể vẽ lên timeline nếu thiếu ngày bắt đầu
+                continue; // Impossible de dessiner sur la timeline sans date de début
             }
 
             let contentVal = val;
-            // Nếu val rỗng, thử lấy từ status
+            // Si val est vide, essayer de récupérer depuis status
             if ((!contentVal || contentVal.trim() === "") && episode.status) {
                 const statusNodes = xmlDoc.getElementsByTagName(episode.status);
                 const statNode = statusNodes[i] || (statusNodes.length === 1 ? statusNodes[0] : null);
                 if (statNode) contentVal = statNode.textContent;
             }
 
-            // Fallback content: Nếu field chính rỗng, thử tìm trong các node cùng group
+            // Fallback contenu : Si le champ principal est vide, chercher dans les nœuds du même groupe
             if ((!contentVal || contentVal.trim() === "") && vNode) {
                 let parent = vNode.parentNode;
                 if (parent) {
@@ -278,11 +292,11 @@ function updateTimeline() {
                         let text = child.textContent ? child.textContent.trim() : "";
                         let isDateOrAge = tag.includes("annee") || tag.includes("age") || tag.includes("date") || tag.includes("note");
                         let isExactDateTag = (sdTag && tag === sdTag.toLowerCase()) || (edTag && tag === edTag.toLowerCase());
-                        let isDescriptorOrId = tag.startsWith("d_") || tag.startsWith("id_"); // Loại bỏ các mã code tự động như 250 (Quốc gia Pháp)
+                        let isDescriptorOrId = tag.startsWith("d_") || tag.startsWith("id_"); // Exclure les codes automatiques comme 250 (Pays France)
                         
                         if (text && !isDateOrAge && !isExactDateTag && !isDescriptorOrId) {
-                            contentVal = text; // Lấy tạm giá trị này
-                            // Nếu tag có vẻ là câu hỏi hoặc giá trị chính, ưu tiên dùng luôn
+                            contentVal = text; // Prendre temporairement cette valeur
+                            // Si la balise semble être une question ou une valeur principale, l'utiliser en priorité
                             if (tag.includes("q_") || tag.includes("v_") || tag.includes("list") || tag.includes("nom") || tag.includes("commune")) {
                                 break;
                             }
@@ -291,12 +305,12 @@ function updateTimeline() {
                 }
             }
 
-            // Nếu field value được định nghĩa nhưng người dùng chưa nhập gì (và fallback cũng không tìm thấy) thì bỏ qua
+            // Si le champ value est défini mais vide (et aucun fallback trouvé), on ignore
             if ((!contentVal || contentVal.trim() === "") && episode.value !== null) {
                 continue;
             }
 
-            // Fallback content nếu không có gì cả
+            // Fallback du contenu s'il n'y a absolument rien
             if (!contentVal || contentVal.trim() === "") {
                 contentVal = episode.id;
             }
@@ -324,15 +338,15 @@ function updateTimeline() {
     });
   });
 
-  // BƯỚC POST-PROCESSING: Nối đuôi các sự kiện liên tiếp để tạo thành block kéo dài (range)
-  // Nhóm các item theo group (ví dụ: A_commune, A_logement,...)
+  // ÉTAPE POST-PROCESSING : Chaîner les événements consécutifs pour créer des blocs continus (ranges)
+  // Regrouper les éléments par groupe (ex: A_commune, A_logement,...)
   const itemsByGroup = {};
   newItems.forEach(item => {
       if (!itemsByGroup[item.group]) itemsByGroup[item.group] = [];
       itemsByGroup[item.group].push(item);
   });
 
-  // Với mỗi group, sắp xếp theo ngày bắt đầu và nối end date vào start date của sự kiện tiếp theo
+  // Pour chaque groupe, trier par date de début et lier la date de fin à la date de début de l'événement suivant
   for (let groupId in itemsByGroup) {
       let groupItems = itemsByGroup[groupId];
       groupItems.sort((a, b) => a.start.getTime() - b.start.getTime());
@@ -341,10 +355,10 @@ function updateTimeline() {
           let current = groupItems[i];
           if (!current.end) {
               if (i < groupItems.length - 1) {
-                  // Kéo dài đến khi sự kiện tiếp theo bắt đầu
+                  // Étendre jusqu'au début de l'événement suivant
                   current.end = groupItems[i + 1].start;
               } else {
-                  // Sự kiện cuối cùng kéo dài đến hiện tại
+                  // Le dernier événement s'étend jusqu'à aujourd'hui
                   current.end = new Date();
               }
           }
@@ -354,19 +368,18 @@ function updateTimeline() {
   items.clear();
   items.add(newItems);
   
-  // Trigger custom time logic to update Synthèse if items appeared under the bar
+  // Déclencher la logique de temps personnalisé pour mettre à jour la Synthèse
   const customTime = timeline.getCustomTime(customTimeId);
   timeline.setCustomTime(customTime, customTimeId);
 }
 
-// Initial update
+// Mise à jour initiale
 updateTimeline();
 
-// Lắng nghe tất cả sự kiện nhập liệu từ form
+// Écouter tous les événements de saisie du formulaire
 formEl.addEventListener('change', () => {
   updateTimeline();
 });
 formEl.addEventListener('input', () => {
   updateTimeline();
 });
-
